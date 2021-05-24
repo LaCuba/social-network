@@ -1,0 +1,31 @@
+.userProfile {
+  background-color: #fff;
+}
+
+.avaProfile {
+  position: relative;
+  text-align: center;
+  img {
+    margin-top: -95px;
+    border: 5px solid #fff;
+    border-radius: 100%;
+  }
+}
+
+.imageBtn {
+  margin-top: 2px;
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  label {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e44d3a;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+}
