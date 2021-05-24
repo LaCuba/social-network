@@ -1,18 +1,11 @@
 import React from 'react'
 import styles from './MainPage.module.scss'
-import coverImg from './../../common/images/cover-img.jpeg'
+import Cover from '../Cover/Cover'
 
 const MainPage = (props) => {
   return (
     <div className={styles.content}>
-      <div className={styles.cover}>
-        <div className={styles.coverData}>
-          <img src={coverImg} alt="" />
-          <div className={styles.addPicCover}>
-            <a href="#" className={styles.coverBtn}>Change Image</a>
-          </div>
-        </div>
-      </div>
+      <Cover />
       <div className={styles.mainSectionData}>
         <div className={styles.leftSideBar}>
           <div className={styles.userProfile}>
