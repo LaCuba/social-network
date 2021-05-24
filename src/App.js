@@ -1,9 +1,13 @@
-import './App.css';
-import Header from './component/Header';
+import Header from './component/Header/Header';
+import MainPage from './component/MainPage/MainPage';
+import styles from './App.module.scss'
 
 const App = () => {
   return (
-    <Header />
+    <div className={styles.app}>
+      <Header />
+      <MainPage />
+    </div>
   );
 }
 
