@@ -1,5 +1,5 @@
 import React from 'react'
-import coverImg from './../../common/images/cover-img.jpeg'
+import coverImg from './../../../common/images/cover-img.jpeg'
 import styles from './Cover.module.scss'
 
 const Cover = (props) => {
