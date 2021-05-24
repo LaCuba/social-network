@@ -1,0 +1,88 @@
+/* Reset css */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, 
+p, img, header, nav, ul, li {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Header */
+
+.header {
+  grid-area: header;
+  display: grid;
+  
+  width: 100%;
+  height: auto;
+  float: left;
+  background-color: #e44d3a;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Container */
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  align-items: center;
+  justify-self: center;
+
+  height: 50px;
+  width: 80%;
+}
+
+/* Logo */
+
+.logo img {
+  margin: 0 30px;
+
+  float: left;
+  height: 25px;
+}
+
+/* Nav-header */
+
+.navbar {
+  display: grid;
+  
+	width: 45%;
+}
+
+.navUl {
+  display: grid;
+  grid-template-columns: repeat(4, .5fr);
+  gap: 15px;
+  justify-self: end;
+}
+
+.navItem {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+
+  transition: color .3s linear;
+}
+
+.navItem a:hover {
+  color: black;
+}
+
+.icon {
+  display: block;
+  margin: 0;
+  height: 14px;
+}

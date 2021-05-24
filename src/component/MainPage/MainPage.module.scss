@@ -1,0 +1,92 @@
+.content {
+  grid-area: content;
+  width: 1440px;
+  display: grid;
+}
+
+.mainSectionData {
+  margin: 0;
+  width: 80%;
+  display: grid;
+  grid-template-areas: "leftSideBar" "mainContent" "rightSideBar";
+  grid-template-columns: 2fr 8fr 2fr;
+  justify-self: center;
+}
+
+@media all and (max-width: 1000px) {
+  .mainSection {
+    margin: 0 50px;
+  }
+  .content {
+    display: grid;
+    width: 600px;
+  }
+  .mainSectionData {
+    grid-template-areas: 
+    "leftSideBar" 
+    "rightSideBar"
+    "mainContent"; 
+    grid-template-rows: 2fr 2fr 8fr;
+    grid-template-columns: 1fr;
+    justify-self: center;
+
+  }
+}
+
+.leftSideBar {
+  grid-area: "leftSideBar";
+  background-color: blue;
+}
+
+.mainContent {
+  grid-area: "mainContent";
+  background-color: red;
+}
+
+.rightSideBar {
+  grid-area: "rightSideBar";
+  background-color: yellow;
+}
+
+.coverData {
+  display: grid;
+}
+
+.coverData img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.addPicCover {
+  justify-self: end;
+  position: absolute;
+  top: 90px;
+  
+  width: 90%;
+  z-index: 100;
+}
+
+.coverBtn {
+  position: absolute;
+  right: 0px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e44d3a;
+
+  background-color: white;
+  border: 3px solid #e44d3a;
+  border-radius: 2px;
+  padding: 8px 14px;
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+}
+
+.coverBtn:hover {
+  background-color: #e44d3a;
+  color: white;
+}
