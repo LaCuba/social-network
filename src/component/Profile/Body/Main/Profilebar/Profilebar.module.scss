@@ -1,0 +1,19 @@
+.profilebar {
+  margin-top: 15px;
+  margin-bottom: 45px;
+  width: 100%;
+  .items {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    gap: 15px;
+    list-style-type: none;
+    text-align: center;
+    .label {
+      font-weight: 600;
+      color: #b2b2b2;
+    }
+    .icon {
+     text-decoration: none; 
+    }
+  }
+}
