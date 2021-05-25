@@ -7,7 +7,6 @@ const LeftSidebar = (props) => {
     <div className={styles.leftSideBar}>
       <div className={styles.userProfile}>
         <ProfileInfo />
-        User Profile
       </div>
       <div className={styles.suggetions}>
         Suggetions random users
