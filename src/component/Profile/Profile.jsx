@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './ProfilePage.module.scss'
+import styles from './Profile.module.scss'
 import Cover from './Cover/Cover'
 import LeftSidebar from './LeftSidebar/LeftSidebar'
 import RightSidebar from './RightSidebar/RightSidebar'
 import Body from './Body/Body'
 
-const MainPage = (props) => {
+const Profile = (props) => {
   return (
     <div className={styles.content}>
       <Cover />
@@ -18,4 +18,4 @@ const MainPage = (props) => {
   )
 }
 
-export default MainPage
+export default Profile
