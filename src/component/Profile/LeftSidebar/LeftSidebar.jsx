@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './LeftSidebar.module.scss'
-import UserProfile from './UserProfile/UserProfile'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 const LeftSidebar = (props) => {
   return (
     <div className={styles.leftSideBar}>
       <div className={styles.userProfile}>
-        <UserProfile />
+        <ProfileInfo />
         User Profile
       </div>
       <div className={styles.suggetions}>

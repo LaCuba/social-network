@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Main.module.scss'
+import Posts from './Posts/Posts'
 
 const Main = (props) => {
   return (
@@ -15,6 +16,7 @@ const Main = (props) => {
         </ul>
       </div>
       <div className={styles.content}>
+        <Posts />
         <div className={styles.posts}></div>
         <div className={styles.info}></div>
       </div>

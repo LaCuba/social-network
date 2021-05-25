@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from './UserProfile.module.scss'
+import styles from './ProfileInfo.module.scss'
 import userProfileImage from './../../../../common/images/user-pro-img.png'
 
-const UserProfile = (props) => {
+const ProfileInfo = (props) => {
   return (
     <div className={styles.userProfile}>
       <div className={styles.avaProfile}>
@@ -19,4 +19,4 @@ const UserProfile = (props) => {
   )
 }
 
-export default UserProfile
+export default ProfileInfo
