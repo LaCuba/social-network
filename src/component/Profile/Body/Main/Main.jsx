@@ -1,14 +1,12 @@
 import React from 'react'
 import styles from './Main.module.scss'
 import Posts from './Posts/Posts'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 const Main = (props) => {
   return (
     <div className={styles.contentItems}>
-      <div className={styles.profileInfo}>
-        <div>Full Name</div>
-        <div>Status</div>
-      </div>
+      <ProfileInfo />
       <div className={styles.items}>
         <ul>
           <li>Posts</li>

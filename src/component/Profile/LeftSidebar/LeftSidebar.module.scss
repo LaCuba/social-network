@@ -1,5 +1,15 @@
 .leftSideBar {
   grid-area: "leftSideBar";
-  background-color: blue;
   z-index: 200;
+  padding-right: 15px;
+  // padding-left: 15px;
+}
+
+.userProfile {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.suggetions {
+  background-color: #fff;
 }
