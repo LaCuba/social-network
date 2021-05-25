@@ -9,7 +9,7 @@
   width: 80%;
   display: grid;
   grid-template-areas: "leftSideBar" "mainContent" "rightSideBar";
-  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-columns: 3fr 8fr 3fr;
   justify-self: center;
 }
 
