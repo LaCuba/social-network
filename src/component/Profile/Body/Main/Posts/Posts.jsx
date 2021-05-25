@@ -4,6 +4,7 @@ import userImage from './../../../../../common/images/user-pro-img.png'
 import clock from './../../../../../common/icons/clock.png'
 import like from './../../../../../common/icons/like.svg'
 import views from './../../../../../common/icons/views.svg'
+import options from './../../../../../common/icons/options.svg'
 
 const Posts = (props) => {
   return (
@@ -27,7 +28,7 @@ const Posts = (props) => {
             </div>
           </div>
           <div className={styles.options}>
-            ---
+            <img src={options} alt="" />
             </div>
         </div>
         <div className={styles.body}>
