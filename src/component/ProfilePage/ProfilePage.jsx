@@ -2,8 +2,8 @@ import React from 'react'
 import styles from './ProfilePage.module.scss'
 import Cover from './Cover/Cover'
 import LeftSidebar from './LeftSidebar/LeftSidebar'
-import MainContent from './MainContent/MainContent'
 import RightSidebar from './RightSidebar/RightSidebar'
+import Body from './Body/Body'
 
 const MainPage = (props) => {
   return (
@@ -11,7 +11,7 @@ const MainPage = (props) => {
       <Cover />
       <div className={styles.mainSectionData}>
         <LeftSidebar />
-        <MainContent />
+        <Body />
         <RightSidebar />
       </div>
     </div>
