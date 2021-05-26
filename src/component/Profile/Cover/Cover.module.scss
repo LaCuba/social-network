@@ -1,5 +1,5 @@
 .coverData {
-  display: grid;
+  position: relative;
   img {
     width: 100%;
     height: auto;
@@ -8,18 +8,14 @@
 }
 
 .addPicCover {
-  justify-self: end;
   position: absolute;
-  top: 90px;
+  right: 200px;
+  top: 50px;
   
-  width: 90%;
   z-index: 100;
 }
 
 .coverBtn {
-  position: absolute;
-  right: 0px;
-
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
