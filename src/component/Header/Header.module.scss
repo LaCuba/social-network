@@ -6,8 +6,9 @@
   display: grid;
   
   width: 100%;
-  height: auto;
-  float: left;
+  height: 6vh;
+  min-height: 50px;
+
   background-color: #e44d3a;
 
   top: 0;
@@ -24,8 +25,8 @@
   align-items: center;
   justify-self: center;
 
-  height: 50px;
-  width: 80%;
+  height: 6vh;
+  width: 80%; 
 }
 
 /* Logo */

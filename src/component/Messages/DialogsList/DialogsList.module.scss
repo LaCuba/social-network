@@ -1,0 +1,71 @@
+//Leftside messages list
+
+.leftSide {
+  height: 63vh;
+  border-left:  1px solid #e4e4e4;
+  border-right:  1px solid #e4e4e4;
+  border-bottom:  1px solid #e4e4e4;
+}
+
+.title {
+  padding: 35px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e4e4e4;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  a {
+    justify-self: end;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.messagesList {
+  width: 100%;
+  height: 63vh;
+  position: relative;
+  ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+
+  }
+  li {
+    border-bottom: 1px solid #e4e4e4;
+    list-style-type: none;
+    padding: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  align-items: center;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.messagesInfo {
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+  }
+  p {
+    color: #686868;
+    font-size: 16px;
+  }
+}

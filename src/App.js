@@ -7,8 +7,8 @@ const App = () => {
   return (
     <div className={styles.app}>
       <Header />
-      <Profile />
-      {/* <Messages /> */}
+      {/* <Profile /> */}
+      <Messages />
     </div>
   );
 }

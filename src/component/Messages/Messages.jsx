@@ -1,70 +1,38 @@
 import React from 'react'
 import styles from './Messages.module.scss'
-import optionsImg from './../../common/icons/options.svg'
+import DialogsList from './DialogsList/DialogsList'
 import avatarImg from './../../common/icons/avatar.svg'
+import menuImg from './../../common/icons/menu.svg'
 
-const Messages = () => {
+
+const Messages = (props) => {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        <div className={styles.leftSide}>
-          <div className={styles.title}>
-            <h3>Messages</h3>
-            <a href="#">
-              <img src={optionsImg} alt="" />
-            </a>
-          </div>
-          <div className={styles.messagesList}>
-            <ul>
-              <li>
-                <a href="#">
-                  <div className={styles.details}>
-                    <img src={avatarImg} alt="" />
-                    <div className={styles.messagesInfo}>
-                      <h3>Full Name</h3>
-                      <p>Text of last message</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className={styles.details}>
-                    <img src={avatarImg} alt="" />
-                    <div className={styles.messagesInfo}>
-                      <h3>Full Name</h3>
-                      <p>Text of last message</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className={styles.details}>
-                    <img src={avatarImg} alt="" />
-                    <div className={styles.messagesInfo}>
-                      <h3>Full Name</h3>
-                      <p>Text of last message</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className={styles.details}>
-                    <img src={avatarImg} alt="" />
-                    <div className={styles.messagesInfo}>
-                      <h3>Full Name</h3>
-                      <p>Text of last message</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <DialogsList />
         <div className={styles.rightSide}>
-          <div>Massages</div>
+          <div className={styles.header}>
+            <div className={styles.details}>
+              <div className={styles.userInfo}>
+                <a href="#">
+                  <img src={avatarImg} alt="" />
+                  <div className={styles.info}>
+                    <h3>Full Name</h3>
+                    <p>online</p>
+                  </div>
+                </a>
+              </div>
+              <div className={styles.menu}>
+                <a href="#">
+                  <img src={menuImg} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className={styles.messagesLine}>
+            fadadfas
+          </div>
+          <div className={styles.sendArea}></div>
         </div>
       </div>
     </div>
