@@ -7,7 +7,6 @@ import Users from './component/Users/Users';
 import 'normalize.css'
 import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import { Suspense } from 'react';
 
 const App = () => {
   return (

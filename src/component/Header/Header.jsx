@@ -5,6 +5,7 @@ import profile from './../../common/icons/profile.png'
 import messages from './../../common/icons/messages.png'
 import music from './../../common/icons/music.png'
 import users from './../../common/icons/users.png'
+import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
   return (
@@ -16,36 +17,36 @@ const Header = (props) => {
         <nav className={styles.navbar}>
           <ul className={styles.navUl}>
             <li className={styles.navItem}>
-              <a href="/profile">
+              <NavLink to="/profile">
                 <span className={styles.icon}>
                   <img src={profile} alt="" />
                 </span>
-            Profile
-            </a>
+                Profile
+              </NavLink>
             </li>
             <li className={styles.navItem}>
-              <a href="/messages">
+              <NavLink to="/messages">
                 <span className={styles.icon}>
                   <img src={messages} alt="" />
                 </span>
-            Messages
-            </a>
+                Messages
+              </NavLink>
             </li>
             <li className={styles.navItem}>
-              <a href="/music">
+              <NavLink to="/music">
                 <span className={styles.icon}>
                   <img src={music} alt="" />
                 </span>
             Music
-            </a>
+            </NavLink>
             </li>
             <li className={styles.navItem}>
-              <a href="/users">
+              <NavLink to="/users">
                 <span className={styles.icon}>
                   <img src={users} alt="" />
                 </span>
-            Users
-            </a>
+                Users
+              </NavLink>
             </li>
           </ul>
         </nav>
