@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Music.module.scss'
+import styles from './Users.module.scss'
 
 const Users = (props) => {
   return (
