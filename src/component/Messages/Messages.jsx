@@ -29,10 +29,23 @@ const Messages = (props) => {
               </div>
             </div>
           </div>
-          <div className={styles.messagesLine}>
-            fadadfas
+          <div className={styles.messagesArea}>
+            <div className={styles.myMessage}>
+              <div className={styles.avatar}>
+                <img src={avatarImg} alt="" />
+              </div>
+              <div className={styles.content}>
+                <p>Текст сообщения, средних размеров</p>
+              </div>
+              <div className={styles.messageTime}>
+                <p>21.03.2020</p>
+              </div>
+            </div>
           </div>
-          <div className={styles.sendArea}></div>
+          <div className={styles.sendArea}>
+            <textarea placeholder="Please write your message" className={styles.addMessage}></textarea>
+            <button onClick={() => {}}>Send</button>
+          </div>
         </div>
       </div>
     </div>

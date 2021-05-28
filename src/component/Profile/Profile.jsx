@@ -8,8 +8,8 @@ import Body from './Body/Body'
 const Profile = (props) => {
   return (
     <div className={styles.content}>
-      <Cover />
       <div className={styles.mainSectionData}>
+      <Cover />
         <LeftSidebar />
         <Body />
         <RightSidebar />

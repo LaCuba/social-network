@@ -5,7 +5,7 @@ import avatarImg from './../../../common/icons/avatar.svg'
 
 const DialogsList = (props) => {
   return (
-    <div className={styles.leftSide}>
+    <div className={styles.dialogsList}>
       <div className={styles.title}>
         <h3>Messages</h3>
         <a href="#">
