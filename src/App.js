@@ -9,8 +9,8 @@ const App = () => {
     <div className={styles.app}>
       <div className={styles.container}>
         <Header />
-        {/* <Profile /> */}
-        <Messages />
+        <Profile />
+        {/* <Messages /> */}
       </div>
     </div>
   );

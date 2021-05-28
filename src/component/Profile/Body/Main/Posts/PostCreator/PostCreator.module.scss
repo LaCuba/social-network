@@ -1,0 +1,32 @@
+.postCreator {
+  margin-bottom: 20px;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  align-items: center;
+  
+  textarea {
+    border: 1px solid #e6e6e6;
+    width: 450px;
+    height: 60px;
+    resize: none;
+  }
+  
+  textarea:focus {
+    outline: none;
+  }
+  
+  button {
+    background-color: #e44d3a;
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    justify-self: start;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
