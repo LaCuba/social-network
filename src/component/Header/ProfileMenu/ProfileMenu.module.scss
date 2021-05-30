@@ -31,7 +31,9 @@
   }
 }
 
-.profileMenu:hover .menu { display: grid;}
+.profileMenu:hover .menu {
+  display: grid;
+}
 
 .menu {
   display: none;
