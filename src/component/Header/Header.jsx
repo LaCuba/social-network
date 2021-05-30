@@ -17,7 +17,7 @@ const Header = (props) => {
         <nav className={styles.navbar}>
           <ul className={styles.navUl}>
             <li className={styles.navItem}>
-              <NavLink to="/profile">
+              <NavLink to="/profile" activeClassName={styles.activeLink}>
                 <span className={styles.icon}>
                   <img src={profile} alt="" />
                 </span>
@@ -25,7 +25,7 @@ const Header = (props) => {
               </NavLink>
             </li>
             <li className={styles.navItem}>
-              <NavLink to="/messages">
+              <NavLink to="/messages" activeClassName={styles.activeLink}>
                 <span className={styles.icon}>
                   <img src={messages} alt="" />
                 </span>
@@ -33,7 +33,7 @@ const Header = (props) => {
               </NavLink>
             </li>
             <li className={styles.navItem}>
-              <NavLink to="/music">
+              <NavLink to="/music" activeClassName={styles.activeLink}>
                 <span className={styles.icon}>
                   <img src={music} alt="" />
                 </span>
@@ -41,7 +41,7 @@ const Header = (props) => {
             </NavLink>
             </li>
             <li className={styles.navItem}>
-              <NavLink to="/users">
+              <NavLink to="/users" activeClassName={styles.activeLink}>
                 <span className={styles.icon}>
                   <img src={users} alt="" />
                 </span>

@@ -1,0 +1,31 @@
+.dialogItem {
+  border-bottom: 1px solid #e4e4e4;
+  list-style-type: none;
+  padding: 20px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  align-items: center;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.messagesInfo {
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+  }
+  p {
+    color: #686868;
+    font-size: 16px;
+  }
+}

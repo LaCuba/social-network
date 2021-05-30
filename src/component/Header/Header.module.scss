@@ -57,15 +57,21 @@
   text-align: center;
   list-style-type: none;
   margin: 0 10px;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  
+    transition: color .3s linear;
+  }
+
+  a.activeLink {
+    color: #000000;
+  }
 }
 
-.navItem a {
-  text-decoration: none;
-  color: #ffffff;
-  position: relative;
 
-  transition: color .3s linear;
-}
 
 .navItem a:hover {
   color: black;
