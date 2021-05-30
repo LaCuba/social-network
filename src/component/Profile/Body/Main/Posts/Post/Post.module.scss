@@ -1,5 +1,5 @@
 .item {
-  width: 100%;
+  width: 610px;
 }
 
 .container {
@@ -56,8 +56,13 @@
 //Body
 
 .body{
-  margin-top: 15px;
-  margin-bottom: 15px;
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    white-space: normal !important;
+    word-wrap: break-word;
+  }
 }
 
 //statusBar

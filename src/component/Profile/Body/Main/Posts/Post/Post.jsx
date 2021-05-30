@@ -20,7 +20,7 @@ const Post = (props) => {
               </div>
             <div className={styles.time}>
               <img src={clock} alt="" />
-              <span>21.09.2020</span>
+              <span>{props.time}</span>
             </div>
           </div>
           <div className={styles.options}>
@@ -28,19 +28,21 @@ const Post = (props) => {
           </div>
         </div>
         <div className={styles.body}>
-          Text of post
-          </div>
+          <p>
+            {props.body}
+          </p>
+        </div>
         <div className={styles.statusBar}>
           <div className={styles.bottomContainer}>
             <a href="#" className={styles.likes}>
               <img src={like} alt="" />
               <span>like</span>
-              <span>+25</span>
+              <span>{"+" + props.likes}</span>
             </a>
             <div className={styles.views}>
               <img src={views} alt="" />
               <span>views</span>
-              <span>50</span>
+              <span>{props.views}</span>
             </div>
           </div>
         </div>
