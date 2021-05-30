@@ -1,0 +1,42 @@
+// Nav-header 
+
+.navbar {
+  display: grid;
+  
+	width: 45%;
+}
+
+.navUl {
+  display: grid;
+  grid-template-columns: repeat(4, .5fr);
+  gap: 15px;
+  justify-self: end;
+}
+
+.navItem {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 10px;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+  
+    transition: color .3s linear;
+  }
+
+  a.activeLink {
+    color: #000000;
+  }
+}
+
+.navItem a:hover {
+  color: black;
+}
+
+.icon {
+  display: block;
+  margin: 0;
+  height: 14px;
+}
