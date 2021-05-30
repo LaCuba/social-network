@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Header.module.scss'
 import logo from './../../common/icons/logo.png'
 import Navbar from './Navbar/Navbar'
+import ProfileMenu from './ProfileMenu/ProfileMenu'
 
 const Header = (props) => {
   return (
@@ -11,12 +12,7 @@ const Header = (props) => {
           <img src={logo} alt="logo" />
         </div>
         <Navbar />
-        <div className={styles.profileMenu}>
-          <div className={styles.profileAva}>
-            ava
-          </div>
-        profile
-        </div>
+        <ProfileMenu />
       </div>
     </header>
   )
