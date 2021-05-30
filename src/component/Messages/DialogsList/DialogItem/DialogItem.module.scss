@@ -19,13 +19,22 @@
 }
 
 .messagesInfo {
+  max-width: 200px;
   h3 {
     font-size: 18px;
     font-weight: 600;
     color: #000000;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   p {
     color: #686868;
     font-size: 16px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

@@ -14,17 +14,17 @@ const DialogsList = (props) => {
       </div>
       <div className={styles.messagesList}>
         <ul>
-          <DialogItem url="/messages/1" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/2" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/3" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/4" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/5" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/6" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/7" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/8" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/9" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/10" name="Full Name" lastMessage="Text of last message" />
-          <DialogItem url="/messages/11" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="1" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="2" name="Maksim jkfnaskjfasfasdfasdfasdfdfasdf" lastMessage="Textsadfasdfsfdsfasfasfasfasfasfasfa of last message" />
+          <DialogItem id="3" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="4" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="5" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="6" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="7" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="8" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="9" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="10" name="Full Name" lastMessage="Text of last message" />
+          <DialogItem id="11" name="Full Name" lastMessage="Text of last message" />
         </ul>
       </div>
     </div>
