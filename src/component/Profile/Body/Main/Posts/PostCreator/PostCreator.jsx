@@ -11,7 +11,7 @@ const PostCreator = (props) => {
   }
 
   const addPostCreator = () => {
-    props.addPostCreator("16.05.2021", post)
+    props.addPostCreator(post)
   }
 
   return (
