@@ -12,6 +12,7 @@ const PostCreator = (props) => {
 
   const addPostCreator = () => {
     props.addPostCreator(post)
+    setPost("")
   }
 
   return (
