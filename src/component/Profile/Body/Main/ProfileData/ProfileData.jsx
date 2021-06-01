@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './ProfileInfo.module.scss'
+import styles from './ProfileData.module.scss'
 
-const ProfileInfo = (props) => {
+const ProfileData = (props) => {
   return (
     <div className={styles.profileInfo}>
         <div className={styles.name}>Full Name</div>
@@ -10,4 +10,4 @@ const ProfileInfo = (props) => {
   )
 }
 
-export default ProfileInfo
+export default ProfileData
