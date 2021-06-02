@@ -7,9 +7,7 @@ import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 const Profilebar = (props) => {
 
-  let [disappearance, setDisappearance] = useState(true)
-
-
+  const [disappearance, setDisappearance] = useState(true)
 
   return (
     <div>
@@ -24,7 +22,7 @@ const Profilebar = (props) => {
             </a>
           </li>
           <li className={styles.info}>
-            <a onClick={() => {setDisappearance(false)}} className={styles.icon}>
+            <a onClick={() => setDisappearance(false)} className={styles.icon}>
               <img src={info} alt="" />
               <div className={styles.label}>
                 Info

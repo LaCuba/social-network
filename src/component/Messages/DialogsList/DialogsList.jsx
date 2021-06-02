@@ -5,21 +5,7 @@ import DialogItem from './DialogItem/DialogItem'
 
 const DialogsList = (props) => {
 
-  let items = [
-    { id: 2, name: "Michael Barskiy", lastMessage: "Text of last message"},
-    { id: 3, name: "Full Name", lastMessage: "Text of last message"},
-    { id: 4, name: "Nicholas Barskiy", lastMessage: "Text of last message"},
-    { id: 5, name: "Andrew Barskiy", lastMessage: "Text of last message"},
-    { id: 6, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 7, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 8, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 9, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 10, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 11, name: "Michael Anzorev", lastMessage: "Text of last message"},
-    { id: 12, name: "Michael Anzorev", lastMessage: "Text of last message"}
-  ]
-
-  let dialogItem = items.map(el => <DialogItem id={el.id} 
+  let dialogItem = props.items.map(el => <DialogItem id={el.id} 
     name={el.name} lastMessage={el.lastMessage} />)
 
   return (
