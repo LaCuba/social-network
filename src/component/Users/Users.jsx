@@ -1,25 +1,274 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Users.module.scss'
 import avatarImg from './../../common/icons/avatar.svg'
 
 const Users = (props) => {
+
+  const [selector, setSelector] = useState(true)
+
   return (
     <div className={styles.users}>
-      <div className={styles.container}>
-        <div className={styles.title}>
-          <h3>Users</h3>
-        </div>
+      <div className={styles.title}>
+        <h2>Users</h2>
       </div>
       <div className={styles.usersList}>
-        <div className={styles.user}>
-          <div className={styles.avatar}>
-            <img src={avatarImg} alt="" />
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
           </div>
-          <div className={styles.name}>
-            Full Name
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
           </div>
-          <div className={styles.follow}>
-            <button>Follow</button>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
+          </div>
+          <div className={styles.viewProfile}>
+            <a href="#">
+              View Profile
+            </a>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <div className={styles.avatar}>
+              <img src={avatarImg} alt="" />
+            </div>
+            <div className={styles.name}>
+              <h3>Full Name</h3>
+              </div>
+            <div className={styles.status}>
+              <h4>Status</h4>
+              </div>
+            <div className={selector ? styles.follow : styles.unfollow}>
+              { selector ? <a onClick={ () => setSelector(false)}>Follow</a> :
+              <a onClick={() => setSelector(true)}>Unfollow</a> }
+            </div>
           </div>
           <div className={styles.viewProfile}>
             <a href="#">
