@@ -5,18 +5,7 @@ import Message from './Message/Message'
 
 const Dialog = (props) => {
 
-  let MessagesData = [
-    {id: '1', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: true},
-    {id: '2', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: false},
-    {id: '3', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: true},
-    {id: '4', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: false},
-    {id: '5', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: true},
-    {id: '6', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: true},
-    {id: '7', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: true},
-    {id: '8', bodyMessage: "Text message about my life", messageTime: "21.03.2020", ownerMessage: false},
-  ]
-
-  let MessageElement = MessagesData.map(el => 
+  let MessageElement = props.messages.map(el => 
     <Message ownerMessage={el.ownerMessage} bodyMessage={el.bodyMessage} messageTime={el.messageTime} />)
 
   return (

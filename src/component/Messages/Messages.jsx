@@ -10,9 +10,9 @@ const Messages = (props) => {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        <DialogsList />
+        <DialogsList items={props.items} />
         <div className={styles.rightSide}>
-          <Dialog />
+          <Dialog messages={props.messages} />
           <div className={styles.sendArea}>
             <textarea placeholder="Please write your message" className={styles.addMessage}></textarea>
             <button onClick={() => {}}>Send</button>
