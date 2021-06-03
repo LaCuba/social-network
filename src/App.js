@@ -2,7 +2,7 @@ import Header from './component/Header/Header';
 import styles from './App.module.scss'
 import Profile from './component/Profile/Profile';
 import Music from './component/Music/Music';
-import Users from './component/Users/Users';
+import UsersContainer from './component/Users/UsersContainer';
 import 'normalize.css'
 import { Provider } from 'react-redux';
 import { Route } from 'react-router';
@@ -20,7 +20,7 @@ const App = () => {
             <Route path='/profile' render={() => <Profile />} />
             <Route path='/messages' render={() => <MessagesContainer />} />
             <Route path='/music' render={() => <Music />} />
-            <Route path='/users' render={() => <Users />} />
+            <Route path='/users' render={() => <UsersContainer />} />
           </div>
         </div>
       </Provider>
