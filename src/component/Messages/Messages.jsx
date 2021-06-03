@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Messages.module.scss'
 import DialogsList from './DialogsList/DialogsList'
-import avatarImg from './../../common/icons/avatar.svg'
-import menuImg from './../../common/icons/menu.svg'
 import Dialog from './Dialog/Dialog'
 
 
 const Messages = (props) => {
+
+  const [message, setMessage] = useState('')
+
+  const onMessageChange = (e) => {
+    setMessage(e.currentTarget.value)
+  }
+
+  const addMessageCreator = () => {
+    if (message != "") {
+      props.addMessageCreator(message)
+      setMessage("")
+    }
+  }
+
   return (
     <div className={styles.body}>
       <div className={styles.container}>
@@ -14,8 +26,8 @@ const Messages = (props) => {
         <div className={styles.rightSide}>
           <Dialog messages={props.messages} />
           <div className={styles.sendArea}>
-            <textarea placeholder="Please write your message" className={styles.addMessage}></textarea>
-            <button onClick={() => {}}>Send</button>
+            <textarea onChange={onMessageChange} placeholder="Please write your message" value={message}></textarea>
+            <button onClick={addMessageCreator}>Send</button>
           </div>
         </div>
       </div>
