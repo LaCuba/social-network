@@ -45,16 +45,18 @@
 .follow, 
 .unfollow {
   text-align: center;
-  a {
+  button {
+    cursor: pointer;
     color: #fff;
     background-color: #53d690;
+    border: none;
     border-radius: 3px;
     padding: 5px 20px;
   }
 }
 
 .unfollow {
-  a {
+  button {
     background-color: #e44d3a;
   }
 }

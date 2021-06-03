@@ -18,8 +18,8 @@ const User = (props) => {
         </div>
         <div className={props.followed ? styles.follow : styles.unfollow}>
           {props.followed 
-          ? <a onClick={() => props.addFollowed(props.id ,false)}>Follow</a> 
-          : <a onClick={() => props.addFollowed(props.id ,true)}>Unfollow</a>}
+          ? <button onClick={() => props.addFollowed(props.id ,false)}>Follow</button> 
+          : <button onClick={() => props.addFollowed(props.id ,true)}>Unfollow</button>}
         </div>
       </div>
       <div className={styles.viewProfile}>
