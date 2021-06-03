@@ -6,7 +6,8 @@ const Users = (props) => {
 
   const [selector, setSelector] = useState(true)
 
-  const user = props.usersList.map(el => <User key={el.id} name={el.name} status={el.status} id={el.id} />)
+  const user = props.usersList.map(el => <User key={el.id} name={el.name}
+     status={el.status} id={el.id} followed={el.followed} addFollowed={props.addFollowed} />)
 
   return (
     <div className={styles.users}>

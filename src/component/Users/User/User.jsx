@@ -4,8 +4,6 @@ import avatarImg from './../../../common/icons/avatar.svg'
 
 const User = (props) => {
 
-  const [selector, setSelector] = useState(true)
-
   return (
     <div className={styles.container}>
       <div className={styles.info}>
@@ -18,9 +16,10 @@ const User = (props) => {
         <div className={styles.status}>
           <h4>{props.status}</h4>
         </div>
-        <div className={selector ? styles.follow : styles.unfollow}>
-          {selector ? <a onClick={() => setSelector(false)}>Follow</a> :
-            <a onClick={() => setSelector(true)}>Unfollow</a>}
+        <div className={props.followed ? styles.follow : styles.unfollow}>
+          {props.followed 
+          ? <a onClick={() => props.addFollowed(props.id ,false)}>Follow</a> 
+          : <a onClick={() => props.addFollowed(props.id ,true)}>Unfollow</a>}
         </div>
       </div>
       <div className={styles.viewProfile}>
