@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Users from './Users'
 import { addFollowed, getUsers } from './../../redux/UsersReducer'
@@ -7,10 +7,9 @@ const mapStateToProps = (state) => {
   return {
     usersList: state.users.users,
     currentPage: state.users.currentPage,
-    countUsersOnPage: state.users.countUsersOnPage
+    countUsersOnPage: state.users.countUsersOnPage,
+    totalCountUsers: state.users.totalCountUsers
   }
 }
 
-const UsersContainer = connect(mapStateToProps, {addFollowed, getUsers})(Users)
-
-export default UsersContainer
+export default connect(mapStateToProps, {addFollowed, getUsers})(Users)
