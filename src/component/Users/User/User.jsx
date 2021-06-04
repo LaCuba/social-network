@@ -8,7 +8,7 @@ const User = (props) => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.avatar}>
-          <img src={avatarImg} alt="" />
+          <img src={props.photo ? props.photo : avatarImg} alt="" />
         </div>
         <div className={styles.name}>
           <h3>{props.name}</h3>
