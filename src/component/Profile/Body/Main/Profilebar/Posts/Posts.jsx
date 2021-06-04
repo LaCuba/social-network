@@ -5,7 +5,7 @@ import Post from './Post/Post'
 
 const Posts = (props) => {
 
-  const PostItem = props.posts.map(el => <Post time={el.time} body={el.body} 
+  const PostItem = props.posts.map(el => <Post key={el.id} time={el.time} body={el.body} 
     likes={el.likes} views={el.views} />)
 
   return (

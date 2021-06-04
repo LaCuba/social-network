@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './Users.module.scss'
 import User from './User/User'
 
 const Users = (props) => {
-
-  const [selector, setSelector] = useState(true)
 
   const user = props.usersList.map(el => <User key={el.id} name={el.name}
      status={el.status} id={el.id} followed={el.followed} addFollowed={props.addFollowed} />)

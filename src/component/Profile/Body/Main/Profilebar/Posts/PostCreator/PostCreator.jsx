@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { addPostCreator } from '../../../../../../../redux/ProfileReducer'
 import styles from './PostCreator.module.scss'
 
 const PostCreator = (props) => {

@@ -5,8 +5,8 @@ import Message from './Message/Message'
 
 const Dialog = (props) => {
 
-  let MessageElement = props.messages.map(el => 
-    <Message ownerMessage={el.ownerMessage} bodyMessage={el.bodyMessage} messageTime={el.messageTime} />)
+  const MessageElement = props.messages.map(el => <Message key={el.id} ownerMessage={el.ownerMessage} 
+    bodyMessage={el.bodyMessage} messageTime={el.messageTime} />)
 
   return (
   <div>

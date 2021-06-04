@@ -13,7 +13,7 @@ const Messages = (props) => {
   }
 
   const addMessageCreator = () => {
-    if (message != "") {
+    if (message !== "") {
       props.addMessageCreator(message)
       setMessage("")
     }
