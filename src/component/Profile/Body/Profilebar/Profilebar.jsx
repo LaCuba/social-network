@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Profilebar.module.scss'
-import posts from './../../../../../common/icons/posts.png'
-import info from './../../../../../common/icons/info.png'
+import posts from './../../../../common/icons/posts.png'
+import info from './../../../../common/icons/info.png'
 import PostsContainer from './Posts/PostsContainer'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 

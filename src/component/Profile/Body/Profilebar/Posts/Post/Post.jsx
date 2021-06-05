@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Post.module.scss'
-import userImage from './../../../../../../../common/images/user-pro-img.png'
-import clock from './../../../../../../../common/icons/clock.png'
-import like from './../../../../../../../common/icons/like.svg'
-import views from './../../../../../../../common/icons/views.svg'
-import options from './../../../../../../../common/icons/options.svg'
+import userImage from './../../../../../../common/images/user-pro-img.png'
+import clock from './../../../../../../common/icons/clock.png'
+import like from './../../../../../../common/icons/like.svg'
+import views from './../../../../../../common/icons/views.svg'
+import options from './../../../../../../common/icons/options.svg'
 
 const Post = (props) => {
   return (

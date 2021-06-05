@@ -1,10 +1,15 @@
+import { profileApi } from "../api/api"
+
 const ADD_POST = "ADD-POST"
+const SET_PROFILE = "SET-PROFILE"
 
 const initialState = {
   posts: [
     {id: 1, time: "21.03.2021", body: "Text of post", likes: "222", views: "72"},
     {id: 2, time: "21.03.2021", body: "Text of post", likes: "222", views: "72"}
-  ]
+  ],
+  userId: 16188,
+  profile: null,
 }
 
 const ProfileReducer = (state = initialState, action) => {
@@ -21,12 +26,22 @@ const ProfileReducer = (state = initialState, action) => {
         ...state,
         posts: [...state.posts, newPost]
       }
-
+    case SET_PROFILE:
+      return {
+        ...state,
+        profile: action.profile
+      }
     default:
       return state
   }
 }
 
 export const addPostCreator = (body) => ({type: ADD_POST, body}) 
+const setProfile = (profile) => ({type: SET_PROFILE, profile})
+
+export const getProfile = (userId) => async (dispatch) => {
+  const response = await profileApi.getProfile(userId)
+    dispatch(setProfile(response.data))
+}
 
 export default ProfileReducer

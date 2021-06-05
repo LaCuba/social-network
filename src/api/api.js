@@ -14,3 +14,11 @@ export const usersApi = {
     )
   }
 }
+
+export const profileApi = {
+  getProfile(userId) {
+    return(
+      instance.get(`profile/${userId}`)
+    )
+  }
+}

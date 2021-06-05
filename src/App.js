@@ -1,6 +1,6 @@
 import Header from './component/Header/Header';
 import styles from './App.module.scss'
-import Profile from './component/Profile/Profile';
+import ProfileContainer from './component/Profile/ProfileContainer';
 import Music from './component/Music/Music';
 import UsersContainer from './component/Users/UsersContainer';
 import 'normalize.css'
@@ -17,7 +17,7 @@ const App = () => {
         <div className={styles.app}>
           <div className={styles.container}>
             <Header />
-            <Route path='/profile' render={() => <Profile />} />
+            <Route path='/profile' render={() => <ProfileContainer />} />
             <Route path='/messages' render={() => <MessagesContainer />} />
             <Route path='/music' render={() => <Music />} />
             <Route path='/users' render={() => <UsersContainer />} />

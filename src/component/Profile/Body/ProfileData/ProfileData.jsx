@@ -4,7 +4,7 @@ import styles from './ProfileData.module.scss'
 const ProfileData = (props) => {
   return (
     <div className={styles.profileInfo}>
-        <div className={styles.name}>Full Name</div>
+        <div className={styles.name}>{props.profile.fullName}</div>
         <div className={styles.status}>Status</div>
       </div>
   )
