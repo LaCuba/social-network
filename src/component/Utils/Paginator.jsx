@@ -18,18 +18,16 @@ const Paginator = ({ countItems, countItemsOnPage, currentPage, pageClick, porti
 
   return (
     <div className={styles.container}>
-      <button disabled={portionNumber <= 1} className={styles.prevBtn} 
-        onClick={() => setPortionNumber(portionNumber - 1)}>PREV</button>
-        <div className={styles.page}>
-          {pages
-            .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
-            .map(p => {
-              return <span className={currentPage === p && styles.currentPage}
-                onClick={e => pageClick(p)}>{p}</span>
-            })}
-        </div>
-        <button disabled={portionCount <= portionNumber} className={styles.nextBtn}
-          onClick={() => setPortionNumber(portionNumber + 1)}>NEXT</button>
+      <button disabled={portionNumber <= 1} className={styles.prevBtn}
+        onClick={() => setPortionNumber(portionNumber - 1)}>&laquo;</button>
+      {pages
+        .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+        .map(p => {
+          return <a key={p} className={currentPage === p && styles.currentPage}
+            onClick={e => pageClick(p)}>{p}</a>
+        })}
+      <button disabled={portionCount <= portionNumber} className={styles.nextBtn}
+        onClick={() => setPortionNumber(portionNumber + 1)}>&raquo;</button>
     </div>
   )
 }
