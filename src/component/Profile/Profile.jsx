@@ -15,7 +15,7 @@ const Profile = (props) => {
     <div className={styles.content}>
       <div className={styles.mainSectionData}>
       <Cover />
-        <LeftSidebar profile={props.profile} />
+        <LeftSidebar contacts={props.profile.contacts} />
         <Body profile={props.profile} />
         <RightSidebar />
       </div>

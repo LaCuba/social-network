@@ -6,7 +6,7 @@ const LeftSidebar = (props) => {
   return (
     <div className={styles.leftSideBar}>
       <div className={styles.userProfile}>
-        <ProfileInfo />
+        <ProfileInfo contacts={props.contacts} />
       </div>
       <div className={styles.suggetions}>
         Suggetions random users
