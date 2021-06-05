@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ProfileInfo.module.scss'
+import styles from './Contacts.module.scss'
 import userProfileImage from './../../../../common/images/user-pro-img.png'
 import youtube from './../../../../common/icons/youtube.svg'
 import instagram from './../../../../common/icons/instagram.svg'
@@ -9,7 +9,7 @@ import website from './../../../../common/icons/website.svg'
 import facebook from './../../../../common/icons/facebook.svg'
 import twitter from './../../../../common/icons/twitter.svg'
 
-const ProfileInfo = (props) => {
+const Contacts = (props) => {
 
   let contact = Object.keys(props.contacts).map(key => <li className={styles.contact}>
     <a href={props.contacts[key] ? props.contacts[key] : "#"}>
@@ -36,4 +36,4 @@ const ProfileInfo = (props) => {
   )
 }
 
-export default ProfileInfo
+export default Contacts
