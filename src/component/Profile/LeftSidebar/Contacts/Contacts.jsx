@@ -11,9 +11,9 @@ import twitter from './../../../../common/icons/twitter.svg'
 
 const Contacts = (props) => {
 
-  let contact = Object.keys(props.contacts).map(key => <li className={styles.contact}>
+  const contact = Object.keys(props.contacts).map(key =>  <li className={styles.contact}>
     <a href={props.contacts[key] ? props.contacts[key] : "#"}>
-      <img src={key} alt="" />
+      <img src={ website } alt="" />
       {props.contacts[key] ? props.contacts[key] : "Я еще не завел адрес"}
     </a>
     </li>)
