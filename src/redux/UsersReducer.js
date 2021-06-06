@@ -55,6 +55,13 @@ export const getUsers = (currentPage, countUsersOnPage) => async (dispatch) => {
   dispatch(setTotalCountUsers(data.totalCount))
 }
 
+export const getFriends = (currentPage, countUsersOnPage, friend) => async (dispatch) => {
+  let data = await usersApi.getFriends(currentPage, countUsersOnPage, friend)
+  dispatch(setUsers(data.items))
+  dispatch(setCurrentPage(currentPage))
+  dispatch(setTotalCountUsers(data.totalCount))
+}
+
 export const setFollow = (userId, selector) => async (dispatch) => {
   let response = await (selector ? usersApi.follow(userId) : usersApi.unfollow(userId))
   if (response.data.resultCode === 0) {

@@ -1,0 +1,19 @@
+
+.friends {
+  margin-top: 15px;
+  a {
+    display: flex;
+    align-items: center;
+    img {
+      padding-right: 8px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.friend {
+  padding: 15px;
+  list-style-type: none;
+  border-top: 1px solid #e5e5e5;
+}

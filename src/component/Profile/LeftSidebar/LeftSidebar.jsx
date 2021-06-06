@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './LeftSidebar.module.scss'
 import Contacts from './Contacts/Contacts'
 import Avatar from './Avatar/Avatar'
+import FriendsContainer from './Friends/FriendsContainer'
 
 const LeftSidebar = (props) => {
   return (
@@ -10,8 +11,8 @@ const LeftSidebar = (props) => {
         <Avatar photo={props.profile.photos}/>
         <Contacts contacts={props.profile.contacts} />
       </div>
-      <div className={styles.suggetions}>
-        Suggetions random users
+      <div className={styles.friends}>
+        <FriendsContainer />
       </div>
     </div>
   )
