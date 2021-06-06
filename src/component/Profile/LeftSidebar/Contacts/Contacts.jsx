@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './Contacts.module.scss'
-import userProfileImage from './../../../../common/images/user-pro-img.png'
 import youtube from './../../../../common/icons/youtube.svg'
 import instagram from './../../../../common/icons/instagram.svg'
 import vk from './../../../../common/icons/vk.svg'
