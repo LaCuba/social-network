@@ -7,25 +7,18 @@ const ProfileInfo = (props) => {
     <div className={styles.profileInfo}>
       <div className={styles.container}>
         <div>
-          <b>Date of Birth:</b>
-          <p>21.03.2020</p>
-        </div>
-        <div>
-          <b>Location:</b>
-          <p>Moscow</p>
-        </div>
-        <div>
           <b>About me:</b>
-          <p>I'm a man</p>
+          <p>{props.profile.aboutMe}</p>
         </div>
         <div>
           <b>Looking for a job:</b>
-          <p>Yes</p>
+          <p>{props.profile.lookingForAJob ? "Yes" : "No"}</p>
         </div>
+        {props.profile.lookingForAJob && props.profile.lookingForAJobDescription &&
         <div>
           <b>My proffessionals skills:</b>
-          <p>I know html css and react!</p>
-        </div>
+          <p>{props.profile.lookingForAJobDescription}</p>
+        </div>}
       </div>
     </div>
   )

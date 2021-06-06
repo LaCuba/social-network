@@ -31,7 +31,7 @@ const Profilebar = (props) => {
           </li>
         </ul>
       </div>
-      {disappearance ? <PostsContainer /> : <ProfileInfo />}
+      {disappearance ? <PostsContainer /> : <ProfileInfo profile={props.profile} />}
     </div>
   )
 }
