@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getFriends } from './../../../../redux/UsersReducer'
+import { setFollow } from './../../../../redux/UsersReducer'
 import Friends from './Friends'
 
 const mapStateToProps = (state) => {
@@ -11,4 +12,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-  export default connect(mapStateToProps, {getFriends})(Friends)
+  export default connect(mapStateToProps, {getFriends, setFollow})(Friends)
