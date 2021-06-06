@@ -11,11 +11,21 @@ import twitter from './../../../../common/icons/twitter.svg'
 
 const Contacts = (props) => {
 
+  const icons = {
+    youtube,
+    instagram,
+    vk,
+    github,
+    website,
+    facebook,
+    twitter,
+   }
+
   const contact = Object.keys(props.contacts)
     .filter(key => props.contacts[key] != null)
     .map(key => <li className={styles.contact}>
       <a href={props.contacts[key] ? props.contacts[key] : "#"}>
-        <img src={website} alt="" />
+        <img src={icons[key]} alt="" />
         {props.contacts[key] ? props.contacts[key] : "Я еще не завел адрес"}
       </a>
     </li>)
