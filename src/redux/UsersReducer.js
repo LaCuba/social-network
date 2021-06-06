@@ -46,13 +46,20 @@ const UsersReducer = (state = initialState, action) => {
 const setUsers = (users) => ({type: SET_USERS, users })
 const setTotalCountUsers = (count) => ({type: SET_TOTAL_COUNT_USERS, count })
 const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage })
-export const addFollowed = (userId, selector) => ({type: FOLLOWED, userId, selector})
+const addFollowed = (userId, selector) => ({type: FOLLOWED, userId, selector})
 
 export const getUsers = (currentPage, countUsersOnPage) => async (dispatch) => {
   let data = await usersApi.getUsers(currentPage, countUsersOnPage)
   dispatch(setUsers(data.items))
   dispatch(setCurrentPage(currentPage))
   dispatch(setTotalCountUsers(data.totalCount))
+}
+
+export const setFollow = (userId, selector) => async (dispatch) => {
+  let response = await (selector ? usersApi.follow(userId) : usersApi.unfollow(userId))
+  if (response.data.resultCode === 0) {
+    dispatch(addFollowed(userId, selector))
+  }
 }
 
 export default UsersReducer

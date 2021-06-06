@@ -14,7 +14,7 @@ const Users = (props) => {
   }
 
   const user = props.usersList.map(el => <User key={el.id} id={el.id} name={el.name}
-    status={el.status} followed={el.followed} photo={el.photos.small} addFollowed={props.addFollowed} />)
+    status={el.status} followed={el.followed} photo={el.photos.small} setFollow={props.setFollow} />)
 
   return (
     <div className={styles.users}>

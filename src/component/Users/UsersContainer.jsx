@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Users from './Users'
-import { addFollowed, getUsers } from './../../redux/UsersReducer'
+import { setFollow, getUsers } from './../../redux/UsersReducer'
 
 const mapStateToProps = (state) => {
   return {
@@ -12,4 +12,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {addFollowed, getUsers})(Users)
+export default connect(mapStateToProps, {setFollow, getUsers})(Users)
