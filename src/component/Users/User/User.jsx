@@ -23,7 +23,7 @@ const User = (props) => {
         </div>
       </div>
       <div className={styles.viewProfile}>
-        <a href={"#" + props.id}>
+        <a href={"/profile/" + props.id}>
           View Profile
         </a>
       </div>
