@@ -7,7 +7,7 @@ const ProfileMenu = (props) => {
   return (
     <div className={styles.profileMenu}>
       { props.isAuth 
-        ? <div className={styles.container}>
+        && <div className={styles.container}>
             <div className={styles.info}>
               <a href="#">
                 <img src={avatar} alt="" />
@@ -20,7 +20,6 @@ const ProfileMenu = (props) => {
               </div>
             </div>
           </div>
-        : <NavLink to='/login'>Login</NavLink> 
       }
     </div>
   )
