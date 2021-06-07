@@ -9,7 +9,7 @@ import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/Store';
 import MessagesContainer from './component/Messages/MessagesContainer';
-import Login from './component/Login/Login';
+import LoginContainer from './component/Login/LoginContainer';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
         <div className={styles.app}>
           <div className={styles.container}>
             <Header />
-            <Route path='/login' render={() => <Login />} />
+            <Route path='/login' render={() => <LoginContainer />} />
             <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
             <Route path='/messages' render={() => <MessagesContainer />} />
             <Route path='/music' render={() => <Music />} />

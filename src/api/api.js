@@ -39,3 +39,23 @@ export const profileApi = {
     )
   }
 }
+
+export const loginApi = {
+  authMe(data) {
+    return(
+      instance.get(`auth/me`)
+        .then(response => response.data)
+    )
+  },
+  login(data) {
+    return(
+      instance.post(`auth/login`, data)
+        .then(response => response.data)
+    )
+  },
+  logout() {
+    return(
+      instance.delete(`auth/login`)
+    )
+  }
+}

@@ -13,15 +13,12 @@ const Login = (props) => {
           rememberMe: false
         }}
         onSubmit={(values) => {
-          debugger
-          console.log(values)
+          props.loginAuth(values)
         }}
         >
         <Form className={styles.form}>
           <h3>Sign up</h3>
-          {/* <label htmlFor="email">E-mail:</label> */}
           <Field className={styles.input} id="email" name="email" type="email" placeholder="E-mail" />
-          {/* <label htmlFor="password">Password:</label> */}
           <Field className={styles.input} id="password" name="password" type="password" placeholder="Password" />
           <div className={styles.rememberMe}>
             <Field className={styles.checkbox} id="rememberMe" name="rememberMe" type="checkbox" />

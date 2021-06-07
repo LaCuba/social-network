@@ -21,6 +21,15 @@
   label {
     align-self: center;
   }
+
+  button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #53d690;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+  }
 }
 
 .rememberMe {
