@@ -5,17 +5,17 @@ import avaImg from './../../../../common/icons/avatar.svg'
 const Friends = (props) => {
 
   useEffect(() => {
-    props.getFriends(props.currentPage, 5, true)
+    props.getFriends(1, 5, true)
   }, [])
 
-    const friend = props.users.map(el => <li className={styles.friend}>
+    const friend = props.friends.map(el => <li className={styles.friend}>
         <a href={`profile/${el.userId}`}>
           <img src={ el.photos.small ? el.photos.small : avaImg } alt="" />
           {el.name}
         </a>
         {el.followed 
-          ? <button className={styles.unfollow} onClick={() => props.setFollow(el.id, false)}>Unfollow</button>
-          : <button className={styles.follow} onClick={() => props.setFollow(el.id, true)}>Follow</button>}
+          ? <button className={styles.unfollow} onClick={() => props.setFollowFriends(el.id, false)}>Unfollow</button>
+          : <button className={styles.follow} onClick={() => props.setFollowFriends(el.id, true)}>Follow</button>}
       </li>)
 
     return (
