@@ -9,7 +9,7 @@ const Friends = (props) => {
   }, [])
 
     const friend = props.friends.map(el => <li className={styles.friend}>
-        <a href={`profile/${el.userId}`}>
+        <a href={`profile/${el.id}`}>
           <img src={ el.photos.small ? el.photos.small : avaImg } alt="" />
           {el.name}
         </a>
