@@ -1,8 +1,13 @@
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
+import { Redirect } from 'react-router'
 import styles from './Login.module.scss'
 
 const Login = (props) => {
+
+  if (props.isAuth) {
+    return <Redirect to='/profile' />
+  }
 
   return (
     <div className={styles.body}>
