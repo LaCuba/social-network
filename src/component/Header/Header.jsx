@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Header.module.scss'
 import logo from './../../common/icons/logo.png'
 import Navbar from './Navbar/Navbar'
-import ProfileMenu from './ProfileMenu/ProfileMenu'
+import ProfileMenuContainer from './ProfileMenu/ProfileMenuContainer'
 
 const Header = (props) => {
   return (
@@ -12,7 +12,7 @@ const Header = (props) => {
           <img src={logo} alt="logo" />
         </div>
         <Navbar />
-        <ProfileMenu />
+        <ProfileMenuContainer />
       </div>
     </header>
   )
