@@ -9,6 +9,7 @@ import Profile from './Profile'
 const ProfileContainer = (props) => {
 
   const loadProfile = () => {
+    debugger
     let userId = props.match.params.userId
     if (!userId) {
       props.getProfile(props.userId)

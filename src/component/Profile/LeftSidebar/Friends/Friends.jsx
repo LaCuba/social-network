@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from './Friends.module.scss'
 import avaImg from './../../../../common/icons/avatar.svg'
+import { NavLink } from 'react-router-dom'
 
 const Friends = (props) => {
 
@@ -9,10 +10,10 @@ const Friends = (props) => {
   }, [])
 
     const friend = props.friends.map(el => <li className={styles.friend}>
-        <a href={`profile/${el.id}`}>
+        <NavLink to={`profile/${el.id}`}>
           <img src={ el.photos.small ? el.photos.small : avaImg } alt="" />
           {el.name}
-        </a>
+        </NavLink>
         {el.followed 
           ? <button className={styles.unfollow} onClick={() => props.setFollowFriends(el.id, false)}>Unfollow</button>
           : <button className={styles.follow} onClick={() => props.setFollowFriends(el.id, true)}>Follow</button>}

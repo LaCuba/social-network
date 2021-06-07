@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './User.module.scss'
 import avatarImg from './../../../common/icons/avatar.svg'
+import { NavLink } from 'react-router-dom'
 
 const User = (props) => {
 
@@ -23,9 +24,9 @@ const User = (props) => {
         </div>
       </div>
       <div className={styles.viewProfile}>
-        <a href={"/profile/" + props.id}>
+        <NavLink to={"/profile/" + props.id}>
           View Profile
-        </a>
+        </NavLink>
       </div>
     </div>
   )
