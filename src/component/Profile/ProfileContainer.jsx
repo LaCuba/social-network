@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import { compose } from 'redux'
+import withAuthRerander from '../hoc/withAuthRerander'
 import { getProfile } from './../../redux/ProfileReducer'
 import Profile from './Profile'
 
@@ -33,4 +34,5 @@ const mapStateToProps = (state) => {
 export default compose(
   connect(mapStateToProps, { getProfile }),
   withRouter,
+  withAuthRerander
 )(ProfileContainer)

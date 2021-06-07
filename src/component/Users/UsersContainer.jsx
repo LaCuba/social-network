@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Users from './Users'
 import { setFollow, getUsers } from './../../redux/UsersReducer'
+import { compose } from 'redux'
+import withAuthRerander from '../hoc/withAuthRerander'
 
 const mapStateToProps = (state) => {
   return {
@@ -12,4 +14,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {setFollow, getUsers})(Users)
+export default compose(
+  connect(mapStateToProps, {setFollow, getUsers}),
+  withAuthRerander
+)(Users)
