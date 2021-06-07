@@ -4,6 +4,7 @@ import ProfileContainer from './component/Profile/ProfileContainer';
 import Music from './component/Music/Music';
 import UsersContainer from './component/Users/UsersContainer';
 import { initialize } from './redux/AppReducer'
+import { getProfile } from './redux/ProfileReducer'
 import 'normalize.css'
 import { connect, Provider } from 'react-redux';
 import { Route, withRouter } from 'react-router';
@@ -19,6 +20,7 @@ const App = (props) => {
   useEffect(() => {
     if (!props.initialized) {
       props.initialize()
+      props.getProfile(props.userId)
       return <div>Loading....App component</div>
     }
   }, [props.initialized])
@@ -40,12 +42,13 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     initialized: state.app.initialized,
+    userId: state.auth.id
   }
 }
 
 const AppContainer = compose(
   withRouter, 
-  connect(mapStateToProps, { initialize }))
+  connect(mapStateToProps, { initialize, getProfile }))
   (App)
 
 const SocialNetwork = () => {

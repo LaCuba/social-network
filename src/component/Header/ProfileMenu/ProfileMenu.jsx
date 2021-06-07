@@ -5,12 +5,12 @@ import avatar from './../../../common/images/user-pro-img.png'
 const ProfileMenu = (props) => {
   return (
     <div className={styles.profileMenu}>
-      { props.isAuth 
+      { props.isAuth && props.profile
         && <div className={styles.container}>
             <div className={styles.info}>
               <a href="#">
-                <img src={avatar} alt="" />
-                <h3>Full Name</h3>
+                <img src={props.profile.photos.small} alt="" />
+                <h3>{props.profile.fullName}</h3>
               </a>
             </div>
             <div className={styles.menu}>
