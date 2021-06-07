@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './ProfileMenu.module.scss'
 import avatar from './../../../common/images/user-pro-img.png'
-import { NavLink } from 'react-router-dom'
 
 const ProfileMenu = (props) => {
   return (
