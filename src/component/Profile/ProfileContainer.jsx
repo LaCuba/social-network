@@ -20,14 +20,14 @@ const ProfileContainer = (props) => {
     loadProfile()
   }, [props.match.params.userId])
 
-  return <Profile profile={props.profile}
-                  userProfile={props.userProfile}
+  return <Profile profile={!props.match.params.userId ? props.profile : props.userProfile}
                   isOwner={!props.match.params.userId} />
 }
 
 const mapStateToProps = (state) => {
   return {
     profile: state.profile.profile,
+    userProfile: state.profile.userProfile,
     userId: state.auth.id
   }
 }

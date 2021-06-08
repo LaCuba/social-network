@@ -8,7 +8,7 @@ const Body = (props) => {
   return (
     <div className={styles.body}>
       <ProfileData profile={props.profile} />
-      <Profilebar profile={props.profile} />
+      <Profilebar profile={props.profile} isOwner={props.isOwner} />
     </div>
   )
 }

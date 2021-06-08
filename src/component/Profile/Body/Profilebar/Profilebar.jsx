@@ -13,6 +13,7 @@ const Profilebar = (props) => {
     <div>
       <div className={styles.profilebar}>
         <ul className={styles.items}>
+          {props.isOwner &&
           <li className={styles.posts}>
             <a onClick={() => {setDisappearance(true)}} className={styles.icon}>
               <img src={posts} alt="" />
@@ -20,7 +21,7 @@ const Profilebar = (props) => {
                 Posts
               </div>
             </a>
-          </li>
+          </li>}
           <li className={styles.info}>
             <a onClick={() => setDisappearance(false)} className={styles.icon}>
               <img src={info} alt="" />
@@ -31,7 +32,7 @@ const Profilebar = (props) => {
           </li>
         </ul>
       </div>
-      {disappearance ? <PostsContainer /> : <ProfileInfo profile={props.profile} />}
+      {disappearance ? props.isOwner && <PostsContainer /> : <ProfileInfo profile={props.profile} />}
     </div>
   )
 }

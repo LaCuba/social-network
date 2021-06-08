@@ -1,6 +1,6 @@
+import React from 'react';
 import Header from './component/Header/Header';
 import styles from './App.module.scss'
-import ProfileContainer from './component/Profile/ProfileContainer';
 import Music from './component/Music/Music';
 import UsersContainer from './component/Users/UsersContainer';
 import { initialize } from './redux/AppReducer'
@@ -14,14 +14,16 @@ import MessagesContainer from './component/Messages/MessagesContainer';
 import LoginContainer from './component/Login/LoginContainer';
 import { compose } from 'redux';
 import { useEffect } from 'react';
+import { Suspense } from 'react';
+
+const ProfileContainer = React.lazy(() => import('./component/Profile/ProfileContainer'));
 
 const App = (props) => {
 
   useEffect(() => {
     if (!props.initialized) {
       props.initialize()
-      props.getProfile(props.userId)
-      return <div>Loading....App component</div>
+      // props.getProfile(props.userId)
     }
   }, [props.initialized])
 
@@ -30,7 +32,9 @@ const App = (props) => {
       <div className={styles.container}>
         <Header />
         <Route path='/login' render={() => <LoginContainer />} />
-        <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+        <Route path='/profile/:userId?' render={() => <Suspense fallback={<div>Loading... Profile </div>}> 
+          <ProfileContainer />
+        </Suspense>} />
         <Route path='/messages' render={() => <MessagesContainer />} />
         <Route path='/music' render={() => <Music />} />
         <Route path='/users' render={() => <UsersContainer />} />

@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './Contacts.module.scss'
-import youtube from './../../../../common/icons/youtube.svg'
-import instagram from './../../../../common/icons/instagram.svg'
-import vk from './../../../../common/icons/vk.svg'
-import github from './../../../../common/icons/github.svg'
-import website from './../../../../common/icons/website.svg'
-import facebook from './../../../../common/icons/facebook.svg'
-import twitter from './../../../../common/icons/twitter.svg'
+import youtube from './../../../../../common/icons/youtube.svg'
+import instagram from './../../../../../common/icons/instagram.svg'
+import vk from './../../../../../common/icons/vk.svg'
+import github from './../../../../../common/icons/github.svg'
+import website from './../../../../../common/icons/website.svg'
+import facebook from './../../../../../common/icons/facebook.svg'
+import twitter from './../../../../../common/icons/twitter.svg'
 
 const Contacts = (props) => {
 

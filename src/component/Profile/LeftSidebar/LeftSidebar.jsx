@@ -1,16 +1,12 @@
 import React from 'react'
 import styles from './LeftSidebar.module.scss'
-import Contacts from './Contacts/Contacts'
-import Avatar from './Avatar/Avatar'
 import FriendsContainer from './Friends/FriendsContainer'
+import ProfileData from './ProfileData/ProfileData'
 
 const LeftSidebar = (props) => {
   return (
     <div className={styles.leftSideBar}>
-      <div className={styles.userProfile}>
-        <Avatar photo={props.profile.photos}/>
-        <Contacts contacts={props.profile.contacts} />
-      </div>
+      <ProfileData profile={props.profile} isOwner={props.isOwner} />
       <div className={styles.friends}>
         {props.isOwner && <FriendsContainer />}
       </div>
