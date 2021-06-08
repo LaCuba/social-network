@@ -1,4 +1,5 @@
 import React from 'react'
+import ProfileDataForm from './ProfileDataForm/ProfileDataForm'
 import styles from './Settings.module.scss'
 
 const Settings = (props) => {
@@ -7,11 +8,11 @@ const Settings = (props) => {
       <div className={styles.container}>
         <div className={styles.title}>
           <h3>
-            Redact profile info
+            Edit your info
           </h3>
         </div>
         <div className={styles.profileDataForm}>
-          <div>Forms</div>
+          <ProfileDataForm />
         </div>
       </div>
     </div>
