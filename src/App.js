@@ -15,6 +15,7 @@ import LoginContainer from './component/Login/LoginContainer';
 import { compose } from 'redux';
 import { useEffect } from 'react';
 import { Suspense } from 'react';
+import Settings from './component/Settings/Settings';
 
 const ProfileContainer = React.lazy(() => import('./component/Profile/ProfileContainer'));
 
@@ -32,6 +33,7 @@ const App = (props) => {
       <div className={styles.container}>
         <Header />
         <Route path='/login' render={() => <LoginContainer />} />
+        <Route path='/settings' render={() => <Settings />} />
         <Route path='/profile/:userId?' render={() => <Suspense fallback={<div>Loading... Profile </div>}> 
           <ProfileContainer />
         </Suspense>} />
