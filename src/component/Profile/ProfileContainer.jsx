@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import { compose } from 'redux'
 import withAuthRerander from '../hoc/withAuthRerander'
-import { getProfile } from './../../redux/ProfileReducer'
+import { getProfile, getUserProfile } from './../../redux/ProfileReducer'
 import Profile from './Profile'
 
 const ProfileContainer = (props) => {
 
   const loadProfile = () => {
-    debugger
     let userId = props.match.params.userId
     if (!userId) {
       props.getProfile(props.userId)
     }
-    props.getProfile(userId)
+    props.getUserProfile(userId)
   }
 
   useEffect(() => {
@@ -22,18 +21,19 @@ const ProfileContainer = (props) => {
   }, [props.match.params.userId])
 
   return <Profile profile={props.profile}
-                  getProfile={props.getProfile} />
+                  userProfile={props.userProfile}
+                  isOwner={!props.match.params.userId} />
 }
 
 const mapStateToProps = (state) => {
   return {
     profile: state.profile.profile,
-    userId: state.profile.userId
+    userId: state.auth.id
   }
 }
 
 export default compose(
-  connect(mapStateToProps, { getProfile }),
+  connect(mapStateToProps, { getProfile, getUserProfile }),
   withRouter,
   withAuthRerander
 )(ProfileContainer)

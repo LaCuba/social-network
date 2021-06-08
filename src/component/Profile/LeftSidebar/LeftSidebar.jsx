@@ -12,7 +12,7 @@ const LeftSidebar = (props) => {
         <Contacts contacts={props.profile.contacts} />
       </div>
       <div className={styles.friends}>
-        <FriendsContainer />
+        {props.isOwner && <FriendsContainer />}
       </div>
     </div>
   )
