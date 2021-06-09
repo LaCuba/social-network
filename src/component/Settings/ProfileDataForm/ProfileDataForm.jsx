@@ -6,37 +6,34 @@ const ProfileDataForm = (props) => {
   return (
     <div className={styles.profileDataForm}>
       <Formik 
-        initialValues={{
-          fullName: '',
-          lookingForAJob: false,
-          lookingForAJobDescription: '',
-          aboutMe: '',
-          contacts: {
-            github: '',
-            vk: '',
-            facebook: '',
-            instagram: '',
-            twitter: '',
-            website: '',
-            youtube: '',
-            mainLink: ''
-          }
-        }}
+        initialValues={ props.profile }
         onSubmit={(values) => {
           console.log(values)
         }}
         >
         <Form className={styles.form}>
-          <label htmlFor="fullName">Full Name</label>
-          <Field className={styles.input} id="fullName" name="fullName" placeholder="Full Name" />
-          <label htmlFor="lookingForAJob">Looking for a job</label>
-          <Field className={styles.input} id="lookingForAJob" name="lookingForAJob" type="checkbox" />
-          <label htmlFor="lookingForAJobDescription">My proffessionals skills</label>
-          <Field className={styles.input} id="lookingForAJobDescription" name="lookingForAJobDescription" 
-            placeholder="My proffessionals skills" />
-          <label htmlFor="aboutMe">About me</label>
-          <Field className={styles.input} id="aboutMe" name="aboutMe" placeholder="About me" />
-
+          <div>
+            <label htmlFor="fullName">Full Name</label>
+            <Field className={styles.input} id="fullName" name="fullName" placeholder="Full Name" />
+          </div>
+          <div>
+            <label htmlFor="lookingForAJob">Looking for a job</label>
+            <Field className={styles.input} id="lookingForAJob" name="lookingForAJob" type="checkbox" />
+          </div>
+          <div>
+            <label htmlFor="lookingForAJobDescription">My proffessionals skills</label>
+            <Field className={styles.input} id="lookingForAJobDescription" name="lookingForAJobDescription" 
+              placeholder="My proffessionals skills" />
+          </div>
+          <div>
+            <label htmlFor="aboutMe">About me</label>
+            <Field className={styles.input} id="aboutMe" name="aboutMe" placeholder="About me" />
+          </div>
+          {Object.keys(props.profile.contacts)
+            .map(key => <div>
+              <label htmlFor={"contacts." + key}>{key}</label>
+              <Field className={styles.input} id={"contacts." + key} name={"contacts." + key} placeholder={key} />
+            </div>)}
           <button type="submit">Save</button>
         </Form>
       </Formik>
