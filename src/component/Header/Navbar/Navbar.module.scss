@@ -26,14 +26,12 @@
     transition: color .3s linear;
   }
 
+  a:hover,
   a.activeLink {
     color: #000000;
   }
 }
 
-.navItem a:hover {
-  color: black;
-}
 
 .icon {
   display: block;
