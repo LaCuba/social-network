@@ -42,7 +42,7 @@ export const loginAuth = (data) => async (dispatch) => {
 
 export const logoutAuth = () => async (dispatch) => {
   const response = await loginApi.logout()
-  if (response.resultCode === 0) {
+  if (response.data.resultCode === 0) {
     dispatch(setUserData( null, null, null, false))
   }
 }
