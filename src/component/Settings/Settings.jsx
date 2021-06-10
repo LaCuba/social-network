@@ -12,7 +12,7 @@ const Settings = (props) => {
           </h3>
         </div>
         <div className={styles.profileDataForm}>
-          <ProfileDataForm profile={props.profile} />
+          <ProfileDataForm profile={props.profile} setProfileInfo={props.setProfileInfo} />
         </div>
       </div>
     </div>

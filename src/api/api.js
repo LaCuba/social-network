@@ -37,6 +37,11 @@ export const profileApi = {
     return(
       instance.get(`profile/${userId}`)
     )
+  },
+  setProfileInfo(data) {
+    return(
+      instance.put('profile', data)
+    )
   }
 }
 

@@ -59,6 +59,11 @@
     border-bottom: 1px solid #e5e5e5;
     padding: 10px 20px;
     text-align: center;
+    transition: .3s linear;
+  }
+
+  .btn:hover {
+    background-color: #e44d3a;
   }
 
   a {

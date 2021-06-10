@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getProfile } from '../../redux/ProfileReducer'
+import { getProfile, setProfileInfo } from '../../redux/ProfileReducer'
 import Settings from './Settings'
 
 
@@ -11,7 +11,7 @@ const SettingsContainer = (props) => {
     return <div>Loadding...</div>
   }
 
-  return <Settings profile={props.profile} />
+  return <Settings profile={props.profile} setProfileInfo={props.setProfileInfo} />
 }
 
 
@@ -22,4 +22,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { getProfile })(SettingsContainer)
+export default connect(mapStateToProps, { getProfile, setProfileInfo })(SettingsContainer)

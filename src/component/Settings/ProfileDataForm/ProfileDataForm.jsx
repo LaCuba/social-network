@@ -8,7 +8,8 @@ const ProfileDataForm = (props) => {
       <Formik 
         initialValues={ props.profile }
         onSubmit={(values) => {
-          console.log(values)
+          debugger
+          props.setProfileInfo(values)
         }}
         >
         <Form className={styles.form}>

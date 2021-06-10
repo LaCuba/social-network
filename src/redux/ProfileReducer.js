@@ -51,6 +51,14 @@ export const getProfile = (userId) => async (dispatch) => {
     dispatch(setProfile(response.data))
 }
 
+export const setProfileInfo = (data) => async (dispatch, getState) => {
+  const response = await profileApi.setProfileInfo(data)
+  debugger
+  if (response.data.resultCode === 0) {
+    dispatch(getProfile(getState().auth.id))
+  }
+}
+
 export const getUserProfile = (userId) => async (dispatch) => {
   const response = await profileApi.getProfile(userId)
     dispatch(setUserProfile(response.data))
