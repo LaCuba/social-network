@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ProfileMenu.module.scss'
-import avatar from './../../../common/images/user-pro-img.png'
+import avatarImg from './../../../common/images/user-pro-img.png'
 import { NavLink } from 'react-router-dom'
 
 const ProfileMenu = (props) => {
@@ -10,7 +10,7 @@ const ProfileMenu = (props) => {
         && <div className={styles.container}>
             <div className={styles.info}>
               <a href="#">
-                <img src={props.profile.photos.small} alt="" />
+                <img src={props.profile.photos.small ? props.profile.photos.small : avatarImg} alt="" />
                 <h3>{props.profile.fullName}</h3>
               </a>
             </div>
