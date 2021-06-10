@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './ProfileMenu.module.scss'
 import avatar from './../../../common/images/user-pro-img.png'
+import { NavLink } from 'react-router-dom'
 
 const ProfileMenu = (props) => {
   return (
@@ -14,7 +15,10 @@ const ProfileMenu = (props) => {
               </a>
             </div>
             <div className={styles.menu}>
-              <div>
+              <div className={styles.btn}>
+                <NavLink to="/settings">Settings</NavLink>
+              </div>
+              <div className={styles.btn}>
                 <a onClick={() => props.logoutAuth()}>Logout</a>
               </div>
             </div>
