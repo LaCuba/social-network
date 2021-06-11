@@ -42,6 +42,16 @@ export const profileApi = {
     return(
       instance.put('profile', data)
     )
+  },
+  getStatus(userId) {
+    return(
+      instance.get(`profile/status/${userId}`)
+    )
+  },
+  setStatus(data) {
+    return(
+      instance.put(`profile/status`, {status: data})
+    )
   }
 }
 

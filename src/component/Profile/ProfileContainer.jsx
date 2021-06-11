@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import { compose } from 'redux'
 import withAuthRerander from '../hoc/withAuthRerander'
-import { getProfile, getUserProfile } from './../../redux/ProfileReducer'
+import { getProfile, getUserProfile, getStatus } from './../../redux/ProfileReducer'
 import Profile from './Profile'
 
 const ProfileContainer = (props) => {
@@ -12,8 +12,10 @@ const ProfileContainer = (props) => {
     let userId = props.match.params.userId
     if (!userId) {
       props.getProfile(props.userId)
+      props.getStatus(props.userId)
+    } else {
+      props.getUserProfile(userId)
     }
-    props.getUserProfile(userId)
   }
 
   useEffect(() => {
@@ -21,19 +23,21 @@ const ProfileContainer = (props) => {
   }, [props.match.params.userId])
 
   return <Profile profile={!props.match.params.userId ? props.profile : props.userProfile}
-                  isOwner={!props.match.params.userId} />
+                  isOwner={!props.match.params.userId}
+                  status={props.profileStatus} />
 }
 
 const mapStateToProps = (state) => {
   return {
     profile: state.profile.profile,
     userProfile: state.profile.userProfile,
-    userId: state.auth.id
+    userId: state.auth.id,
+    profileStatus: state.profile.profileStatus
   }
 }
 
 export default compose(
-  connect(mapStateToProps, { getProfile, getUserProfile }),
+  connect(mapStateToProps, { getProfile, getUserProfile, getStatus }),
   withRouter,
   withAuthRerander
 )(ProfileContainer)

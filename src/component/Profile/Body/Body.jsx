@@ -7,7 +7,7 @@ const Body = (props) => {
 
   return (
     <div className={styles.body}>
-      <ProfileData profile={props.profile} />
+      <ProfileData profile={props.profile} status={props.status} />
       <Profilebar profile={props.profile} isOwner={props.isOwner} />
     </div>
   )
