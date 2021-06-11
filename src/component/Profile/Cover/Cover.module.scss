@@ -16,25 +16,48 @@
   top: 50px;
   
   z-index: 100;
+
+  input {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  label {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #e44d3a;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 8px 15px;
+    border: 3px solid #e44d3a;
+    transition: all 0.2s linear;
+  }
+
+  label:hover {
+    background-color: #e44d3a;
+    color: white;
+  }
 }
 
-.coverBtn {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: 600;
-  color: #e44d3a;
+// .coverBtn {
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   font-size: 15px;
+//   font-weight: 600;
+//   color: #e44d3a;
 
-  background-color: white;
-  border: 3px solid #e44d3a;
-  border-radius: 2px;
-  padding: 8px 14px;
-  cursor: pointer;
+//   background-color: white;
+//   border: 3px solid #e44d3a;
+//   border-radius: 2px;
+//   padding: 8px 14px;
+//   cursor: pointer;
 
-  transition: all 0.2s linear;
-}
+//   transition: all 0.2s linear;
+// }
 
-.coverBtn:hover {
-  background-color: #e44d3a;
-  color: white;
-}
+// .coverBtn:hover {
+//   background-color: #e44d3a;
+//   color: white;
+// }

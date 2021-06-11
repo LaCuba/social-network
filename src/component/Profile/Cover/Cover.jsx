@@ -8,7 +8,8 @@ const Cover = (props) => {
       <div className={styles.coverData}>
         <img src={coverImg} alt="" />
         <div className={styles.addPicCover}>
-          <a href="#" className={styles.coverBtn}>Change Image</a>
+          <input type="file" name="avatar" id="file" />
+          <label htmlFor="file">Change Photo</label>
         </div>
       </div>
     </div>
