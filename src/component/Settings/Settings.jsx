@@ -1,8 +1,14 @@
 import React from 'react'
+import { Redirect } from 'react-router'
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm'
 import styles from './Settings.module.scss'
 
 const Settings = (props) => {
+
+  if (!props.isAuth) {
+    return <Redirect to='/login' />
+  }
+
   return (
     <div className={styles.settings}>
       <div className={styles.container}>

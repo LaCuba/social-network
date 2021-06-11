@@ -12,7 +12,6 @@ const ProfileMenu = (props) => {
     history.push('/login')
   }
 
-
   return (
     <div className={styles.profileMenu}>
       { props.isAuth && props.profile

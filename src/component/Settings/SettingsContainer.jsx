@@ -11,14 +11,15 @@ const SettingsContainer = (props) => {
     return <div>Loadding...</div>
   }
 
-  return <Settings profile={props.profile} setProfileInfo={props.setProfileInfo} />
+  return <Settings profile={props.profile} setProfileInfo={props.setProfileInfo} isAuth={props.isAuth} />
 }
 
 
 const mapStateToProps = (state) => {
   return {
     profile: state.profile.profile,
-    userId: state.auth.id
+    userId: state.auth.id,
+    isAuth: state.auth.isAuth
   }
 }
 
