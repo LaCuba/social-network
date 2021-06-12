@@ -8,7 +8,7 @@ import Body from './Body/Body'
 const Profile = (props) => {
 
   if (!props.profile) {
-  return <h3>Loadding....</h3>
+    return <h3>Loadding....</h3>
   }
   
   return (
@@ -16,7 +16,8 @@ const Profile = (props) => {
       <div className={styles.mainSectionData}>
       <Cover />
         <LeftSidebar profile={props.profile} isOwner={props.isOwner} />
-        <Body profile={props.profile} isOwner={props.isOwner} status={props.status}/>
+        <Body profile={props.profile} isOwner={props.isOwner} 
+          status={props.status} updateStatus={props.updateStatus} />
         <RightSidebar />
       </div>
     </div>

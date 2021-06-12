@@ -51,6 +51,7 @@ export const profileApi = {
   setStatus(data) {
     return(
       instance.put(`profile/status`, {status: data})
+        .then( response => response.data)
     )
   }
 }

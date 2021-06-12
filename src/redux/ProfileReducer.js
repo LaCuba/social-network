@@ -62,7 +62,6 @@ export const getProfile = (userId) => async (dispatch) => {
 
 export const setProfileInfo = (data) => async (dispatch, getState) => {
   const response = await profileApi.setProfileInfo(data)
-  debugger
   if (response.data.resultCode === 0) {
     dispatch(getProfile(getState().auth.id))
   }
@@ -75,8 +74,14 @@ export const getUserProfile = (userId) => async (dispatch) => {
 
 export const getStatus = (userId) => async (dispatch) => {
   const response = await profileApi.getStatus(userId)
-  debugger
   dispatch(setStatus(response.data))
+}
+
+export const updateStatus = (status) => async (dispatch) => {
+  const response = await profileApi.setStatus(status)
+  if (response.resultCode === 0) {
+    dispatch(setStatus(status))
+  }
 }
 
 export default ProfileReducer

@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './ProfileData.module.scss'
+import ProfileStatus from './ProfileStatus/ProfileStatus'
 
 const ProfileData = (props) => {
+
   return (
     <div className={styles.profileInfo}>
         <div className={styles.name}>{props.profile.fullName}</div>
-        <div className={styles.status}>{props.status}</div>
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
       </div>
   )
 }
