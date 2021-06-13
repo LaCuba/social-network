@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ProfileMenu.module.scss'
 import avatarImg from './../../../common/images/user-pro-img.png'
 import { NavLink, useHistory } from 'react-router-dom'
+import iconArray from './../../../common/icons/arrow1.svg'
 
 const ProfileMenu = (props) => {
 
@@ -20,6 +21,9 @@ const ProfileMenu = (props) => {
               <NavLink to='/profile'>
                 <img src={props.profile.photos.small ? props.profile.photos.small : avatarImg} alt="" />
                 <h3>{props.profile.fullName}</h3>
+                <div className={styles.iconMenu}>
+                  <img src={iconArray} alt="" />
+                </div>
               </NavLink>
             </div>
             <div className={styles.menu}>
