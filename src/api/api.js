@@ -53,6 +53,17 @@ export const profileApi = {
       instance.put(`profile/status`, {status: data})
         .then( response => response.data)
     )
+  },
+  uploadPhoto(file) {
+    const formData = new FormData()
+    formData.append('image', file)
+    return(
+      instance.put(`profile/photo`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      })
+    )
   }
 }
 

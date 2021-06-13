@@ -84,4 +84,11 @@ export const updateStatus = (status) => async (dispatch) => {
   }
 }
 
+export const uploadPhoto = (file) => async (dispatch, getState) => {
+  const response = await profileApi.uploadPhoto(file)
+  if (response.data.resultCode === 0) {
+    dispatch(getProfile(getState().auth.id))
+  }
+}
+
 export default ProfileReducer

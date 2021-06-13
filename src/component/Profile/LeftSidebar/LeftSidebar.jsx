@@ -6,7 +6,7 @@ import ProfileData from './ProfileData/ProfileData'
 const LeftSidebar = (props) => {
   return (
     <div className={styles.leftSideBar}>
-      <ProfileData profile={props.profile} isOwner={props.isOwner} />
+      <ProfileData profile={props.profile} isOwner={props.isOwner} uploadPhoto={props.uploadPhoto} />
       <div className={styles.friends}>
         {props.isOwner && <FriendsContainer />}
       </div>

@@ -9,7 +9,7 @@ const ProfileData = (props) => {
   }
   return (
     <div className={styles.userProfile}>
-      <Avatar photo={props.profile.photos} isOwner={props.isOwner}/>
+      <Avatar photo={props.profile.photos} isOwner={props.isOwner} uploadPhoto={props.uploadPhoto}/>
       <Contacts contacts={props.profile.contacts} />
     </div>
   )
