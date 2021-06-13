@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import { getFriends } from './../../../../redux/UsersReducer'
 import { setFollowFriends } from './../../../../redux/UsersReducer'

@@ -9,7 +9,7 @@ const Friends = (props) => {
     props.getFriends(1, 5, true)
   }, [])
 
-    const friend = props.friends.map(el => <li className={styles.friend}>
+    const friend = props.friends.map(el => <li key={el.id} className={styles.friend}>
         <NavLink to={`profile/${el.id}`}>
           <img src={ el.photos.small ? el.photos.small : avaImg } alt="" />
           {el.name}

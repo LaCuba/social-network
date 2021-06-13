@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './Profile.module.scss'
 import Cover from './Cover/Cover'
 import LeftSidebar from './LeftSidebar/LeftSidebar'

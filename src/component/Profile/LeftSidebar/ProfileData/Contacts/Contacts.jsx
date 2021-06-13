@@ -22,7 +22,7 @@ const Contacts = (props) => {
 
   const contact = Object.keys(props.contacts)
     .filter(key => props.contacts[key] != null)
-    .map(key => <li className={styles.contact}>
+    .map(key => <li key={key} className={styles.contact}>
       <a href={props.contacts[key] ? props.contacts[key] : "#"}>
         <img src={icons[key]} alt="" />
         {props.contacts[key] ? props.contacts[key] : "Я еще не завел адрес"}

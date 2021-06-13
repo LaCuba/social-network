@@ -19,7 +19,7 @@ import SettingsContainer from './component/Settings/SettingsContainer';
 
 const ProfileContainer = React.lazy(() => import('./component/Profile/ProfileContainer'));
 
-const App = (props) => {
+const App = ({...props}) => {
 
   useEffect(() => {
     if (!props.initialized) {

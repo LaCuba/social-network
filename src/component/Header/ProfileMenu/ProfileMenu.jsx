@@ -31,7 +31,7 @@ const ProfileMenu = (props) => {
                 <NavLink to="/settings">Settings</NavLink>
               </div>
               <div className={styles.btn}>
-                <a onClick={logout}>Logout</a>
+                <button onClick={logout}>Logout</button>
               </div>
             </div>
           </div>

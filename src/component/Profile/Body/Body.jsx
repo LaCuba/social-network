@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './Body.module.scss'
 import Profilebar from './Profilebar/Profilebar'
 import ProfileData from './ProfileData/ProfileData'

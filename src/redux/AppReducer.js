@@ -1,4 +1,3 @@
-import { loginApi } from "../api/api"
 import { authMe } from "./AuthReducer"
 
 const SET_INITIALIZED = "SET-INITIALIZED"

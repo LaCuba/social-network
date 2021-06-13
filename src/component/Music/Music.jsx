@@ -3,8 +3,10 @@ import styles from './Music.module.scss'
 
 const Music = (props) => {
   return (
-    <div>
-      Music
+    <div className={styles.music}>
+      <h3>
+        Music Page
+      </h3>
     </div>
   )
 }

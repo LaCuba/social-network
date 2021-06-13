@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styles from './Users.module.scss'
 import User from './User/User'
 import Paginator from '../Utils/Paginator'
