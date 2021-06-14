@@ -8,7 +8,7 @@ import { getProfile } from './redux/ProfileReducer'
 import 'normalize.css'
 import { connect, Provider } from 'react-redux';
 import { Route, withRouter } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import store from './redux/Store';
 import MessagesContainer from './component/Messages/MessagesContainer';
 import LoginContainer from './component/Login/LoginContainer';
@@ -58,11 +58,11 @@ const AppContainer = compose(
   (App)
 
 const SocialNetwork = () => {
-  return <BrowserRouter>
+  return <HashRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default SocialNetwork;
