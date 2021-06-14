@@ -8,7 +8,6 @@ const ProfileDataForm = (props) => {
       <Formik 
         initialValues={ props.profile }
         onSubmit={(values) => {
-          debugger
           props.setProfileInfo(values)
         }}
         >
@@ -31,7 +30,7 @@ const ProfileDataForm = (props) => {
             <Field className={styles.input} id="aboutMe" name="aboutMe" placeholder="About me" />
           </div>
           {Object.keys(props.profile.contacts)
-            .map(key => <div>
+            .map(key => <div key={key}>
               <label htmlFor={"contacts." + key}>{key}</label>
               <Field className={styles.input} id={"contacts." + key} name={"contacts." + key} placeholder={key} />
             </div>)}

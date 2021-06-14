@@ -23,7 +23,7 @@ const Paginator = ({ countItems, countItemsOnPage, currentPage, pageClick, porti
       {pages
         .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
         .map(p => {
-          return <a key={p} className={currentPage === p && styles.currentPage}
+          return <a key={p} className={currentPage === p ? styles.currentPage : undefined}
             onClick={e => pageClick(p)}>{p}</a>
         })}
       <button disabled={portionCount <= portionNumber} className={styles.nextBtn}
