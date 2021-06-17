@@ -4,10 +4,27 @@
   align-items: center;
 }
 
+.info {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 5px;
+
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px 55px;
+  border-radius: 2px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
 .form {
   padding: 40px;
   background-color: #fff;
-  margin-top: 100px;
+  margin-top: 50px;
   display: grid;
   gap: 20px;
   width: 400px;

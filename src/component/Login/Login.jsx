@@ -11,6 +11,15 @@ const Login = (props) => {
 
   return (
     <div className={styles.body}>
+      <div className={styles.info}>
+        <h3>Чтобы зайти в соц. сеть воспользуйтесь тестовым аккаунтом:</h3>
+        <div>
+          <b>Email: </b> <span>free@samuraijs.com</span>
+        </div>
+        <div>
+          <b>Password: </b> <span>free</span>
+        </div>
+      </div>
       <Formik 
         initialValues={{
           email: '',
