@@ -26,6 +26,7 @@
   background-color: #fff;
   margin-top: 50px;
   display: grid;
+  grid-template-rows: repeat(5, 1fr);
   gap: 20px;
   width: 400px;
   height: 400px;
@@ -49,12 +50,25 @@
   }
 }
 
-.rememberMe {
-  label {
-    padding-left: 5px;
+.option {
+  display: grid;
+
+  .rememberMe {
+    label {
+      padding-left: 5px;
+    }
+    input {
+      border-radius: 100%;
+    }
   }
-  input {
-    border-radius: 100%;
+
+  .error {
+    align-self: end;
+    display: grid;
+    justify-items: center;
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
