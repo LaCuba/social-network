@@ -2,6 +2,7 @@ import { Field, Form, Formik } from 'formik'
 import React from 'react'
 import { Redirect } from 'react-router'
 import styles from './Login.module.scss'
+import refreshImg from './../../common/icons/refresh.svg'
 
 const Login = (props) => {
 
@@ -43,6 +44,11 @@ const Login = (props) => {
                 {props.error && <span>{props.error}</span>}
               </div>
             </div>
+            { props.captcha && <img className={styles.captchaImg} src={props.captcha} />}
+            { props.captcha && <div className={styles.captchaInput}>
+              <Field id="captcha" name="captcha" type="captcha" placeholder="captcha" />
+              <img src={refreshImg} onClick={() => props.getCaptcha()} />
+            </div>}
             <button type="submit">Login</button>
           </Form>
       </Formik>

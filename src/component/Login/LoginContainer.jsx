@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
 import Login from './Login'
-import { loginAuth } from './../../redux/AuthReducer'
+import { loginAuth, getCaptcha } from './../../redux/AuthReducer'
 
 const mapStateToProps = (state) => {
   return {
+    captcha: state.auth.captcha,
     isAuth: state.auth.isAuth,
     error: state.auth.error
   }
 }
 
-export default connect(mapStateToProps, { loginAuth })(Login)
+export default connect(mapStateToProps, { loginAuth, getCaptcha })(Login)
