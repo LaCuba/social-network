@@ -2,7 +2,6 @@ import React from "react"
 import Header from "./component/Header/Header"
 import styles from "./App.module.scss"
 import Music from "./component/Music/Music"
-import UsersContainer from "./component/Users/UsersContainer"
 import { initialize } from "./redux/AppReducer"
 import { getProfile } from "./redux/ProfileReducer"
 import "normalize.css"
@@ -16,6 +15,7 @@ import { compose } from "redux"
 import { useEffect } from "react"
 import { Suspense } from "react"
 import SettingsContainer from "./component/Settings/SettingsContainer"
+import Users from "./component/Users/Users"
 
 const ProfileContainer = React.lazy(() =>
   import("./component/Profile/ProfileContainer")
@@ -45,7 +45,7 @@ const App = ({ ...props }) => {
         />
         <Route path="/messages" render={() => <MessagesContainer />} />
         <Route path="/music" render={() => <Music />} />
-        <Route path="/users" render={() => <UsersContainer />} />
+        <Route path="/users" render={() => <Users />} />
       </div>
     </div>
   )
