@@ -1,9 +1,10 @@
-import { DispatchType } from "./Store"
+import { DispatchType } from "../store"
 import { getType } from "typesafe-actions"
-import { loginApi } from "../api/api"
-import actions, { ActionsType } from "./actions/actions"
+import { loginApi } from "../../api/api"
+import actions, { ActionsType } from "./../actions/actions"
+import { Reducer } from "redux"
 
-type StateType = {
+type InitialState = {
   id: null | number
   email: null | string
   login: null | string
@@ -21,7 +22,10 @@ const initialState = {
   captcha: null,
 }
 
-const AuthReducer = (state = initialState, action: ActionsType): StateType => {
+const AuthReducer: Reducer<InitialState, ActionsType> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case getType(actions.auth.setUserData):
       return {

@@ -1,8 +1,8 @@
 import { getType } from "typesafe-actions"
-import { profileApi } from "../api/api"
-import actions, { ActionsType } from "./actions/actions"
+import { profileApi } from "../../api/api"
+import actions, { ActionsType } from "./../actions/actions"
 import { Reducer } from "redux"
-import { Post, ProfileType } from "../types/profile/profile"
+import { Post, ProfileType } from "../../types/profile/profile"
 
 type InitialState = {
   posts: Post[]

@@ -1,11 +1,11 @@
 import { Reducer } from "redux"
 import { getType } from "typesafe-actions"
-import { usersApi } from "../api/api"
-import { User } from "../types/users/users"
-import actions, { ActionsType } from "./actions/actions"
-import { DispatchType } from "./Store"
+import { usersApi } from "../../api/api"
+import { User } from "../../types/users/users"
+import actions, { ActionsType } from "./../actions/actions"
+import { DispatchType } from "../store"
 
-export type InitialState = {
+type InitialState = {
   users: User[]
   friends: User[]
   currentPage: number

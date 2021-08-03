@@ -1,19 +1,7 @@
 import { Reducer } from "redux"
 import { getType } from "typesafe-actions/dist/get-type"
-import actions, { ActionsType } from "./actions/actions"
-
-type ItemType = {
-  id: number
-  name: string
-  lastMessage: string
-}
-
-type MessageType = {
-  id: number
-  bodyMessage: string
-  messageTime: string
-  ownerMessage: boolean
-}
+import { ItemType, MessageType } from "../../types/messages/messages"
+import actions, { ActionsType } from "./../actions/actions"
 
 const initialState = {
   items: [
@@ -28,7 +16,7 @@ const initialState = {
     { id: 10, name: "Michael Anzorev", lastMessage: "Text of last message" },
     { id: 11, name: "Michael Anzorev", lastMessage: "Text of last message" },
     { id: 12, name: "Michael Anzorev", lastMessage: "Text of last message" },
-  ] as Array<ItemType>,
+  ],
   messages: [
     {
       id: 1,
@@ -78,10 +66,13 @@ const initialState = {
       messageTime: "21.03.2020",
       ownerMessage: false,
     },
-  ] as Array<MessageType>,
+  ],
 }
 
-type InitialStateType = typeof initialState
+type InitialStateType = {
+  items: ItemType[]
+  messages: MessageType[]
+}
 
 const MessagesReducer: Reducer<InitialStateType, ActionsType> = (
   state = initialState,

@@ -1,15 +1,20 @@
-import { DispatchType } from "./Store"
+import { Reducer } from "redux"
 import { getType } from "typesafe-actions"
-import actions, { ActionsType } from "./actions/actions"
-import { authMe } from "./AuthReducer"
+import actions, { ActionsType } from "../actions/actions"
+import { authMe } from "./auth"
+
+type InitialState = {
+  initialized: boolean
+}
 
 const initialState = {
   initialized: false,
 }
 
-type StateType = typeof initialState
-
-const AppReducer = (state = initialState, action: ActionsType): StateType => {
+const AppReducer: Reducer<InitialState, ActionsType> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case getType(actions.app.initializeSuccess):
       return {
