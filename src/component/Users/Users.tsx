@@ -22,14 +22,14 @@ const Users = () => {
     dispatch(getUsers(currentPage, countUsersOnPage))
   }
 
-  const user = users.map((el) => (
+  const user = users.map((user) => (
     <User
-      key={el.id}
-      id={el.id}
-      name={el.name}
-      status={el.status}
-      followed={el.followed}
-      photos={el.photos}
+      key={user.id}
+      id={user.id}
+      name={user.name}
+      status={user.status}
+      followed={user.followed}
+      photos={user.photos}
     />
   ))
 
