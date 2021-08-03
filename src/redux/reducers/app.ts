@@ -1,7 +1,6 @@
 import { Reducer } from "redux"
 import { getType } from "typesafe-actions"
 import actions, { ActionsType } from "../actions/actions"
-import { authMe } from "./auth"
 
 type InitialState = {
   initialized: boolean
@@ -24,11 +23,6 @@ const AppReducer: Reducer<InitialState, ActionsType> = (
     default:
       return state
   }
-}
-
-export const initialize = () => async (dispatch: any) => {
-  await dispatch(authMe())
-  dispatch(actions.app.initializeSuccess())
 }
 
 export default AppReducer

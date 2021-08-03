@@ -1,14 +1,13 @@
 import { getType } from "typesafe-actions"
-import { profileApi } from "../../api/api"
 import actions, { ActionsType } from "./../actions/actions"
 import { Reducer } from "redux"
 import { Post, ProfileType } from "../../types/profile/profile"
 
 type InitialState = {
   posts: Post[]
-  profile: ProfileType
+  profile: ProfileType | null
   profileStatus: string
-  userProfile: ProfileType
+  userProfile: ProfileType | null
 }
 
 const initialState = {
@@ -67,43 +66,6 @@ const ProfileReducer: Reducer<InitialState, ActionsType> = (
       }
     default:
       return state
-  }
-}
-
-export const getProfile = (userId: number) => async (dispatch: any) => {
-  const response = await profileApi.getProfile(userId)
-  dispatch(actions.profile.setProfile(response.data))
-}
-
-export const setProfileInfo =
-  (data) => async (dispatch: any, getState: any) => {
-    const response = await profileApi.setProfileInfo(data)
-    if (response.data.resultCode === 0) {
-      dispatch(getProfile(getState().auth.id))
-    }
-  }
-
-export const getUserProfile = (userId) => async (dispatch) => {
-  const response = await profileApi.getProfile(userId)
-  dispatch(actions.profile.setUserProfile(response.data))
-}
-
-export const getStatus = (userId) => async (dispatch) => {
-  const response = await profileApi.getStatus(userId)
-  dispatch(actions.profile.setStatus(response.data))
-}
-
-export const updateStatus = (status) => async (dispatch) => {
-  const response = await profileApi.setStatus(status)
-  if (response.resultCode === 0) {
-    dispatch(actions.profile.setStatus(status))
-  }
-}
-
-export const uploadPhoto = (file) => async (dispatch, getState) => {
-  const response = await profileApi.uploadPhoto(file)
-  if (response.data.resultCode === 0) {
-    dispatch(getProfile(getState().auth.id))
   }
 }
 

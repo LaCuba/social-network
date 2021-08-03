@@ -6,15 +6,23 @@ const SET_CAPTCHA = "auth/SET-CAPTCHA"
 
 export const setUserData = createCustomAction(
   SET_USER_DATA,
-  (id: number, email: string, login: string, isAuth: boolean) => ({
+  (
+    id: number | null,
+    email: string | null,
+    login: string | null,
+    isAuth: boolean
+  ) => ({
     data: { id, email, login, isAuth },
   })
 )
 
-export const setError = createCustomAction(SET_ERROR, (error: string) => ({
-  error,
-}))
+export const setError = createCustomAction(
+  SET_ERROR,
+  (error: string | null) => ({
+    error,
+  })
+)
 export const setCaptcha = createCustomAction(
   SET_CAPTCHA,
-  (captcha: string) => ({ captcha })
+  (captcha: string | null) => ({ captcha })
 )
