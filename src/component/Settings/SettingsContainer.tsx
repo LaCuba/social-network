@@ -13,9 +13,11 @@ const SettingsContainer = () => {
   if (!profile && userId !== null) {
     dispatch(getProfile(userId))
     return <div>Loadding...</div>
+  } else if (!profile && !userId) {
+    console.log("Error: have not profile and user's id")
+    return <div>Error</div>
   }
-
-  return <Settings profile={profile} />
+  return <Settings />
 }
 
 export default SettingsContainer
