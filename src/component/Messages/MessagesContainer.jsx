@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import Messages from './Messages'
-import { addMessageCreator } from './../../redux/MessagesReducer'
 import { compose } from 'redux'
 import withAuthRerander from '../hoc/withAuthRerander'
+import actions from '../../redux/actions/actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -10,6 +10,8 @@ const mapStateToProps = (state) => {
     messages: state.messages.messages
   }
 }
+
+const addMessageCreator = actions.messages.addMessageCreator
 
 const MessagesContainer = compose(
   connect(mapStateToProps, {addMessageCreator}),

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addPostCreator } from '../../../../../redux/ProfileReducer'
+import actions from '../../../../../redux/actions/actions'
 import Posts from './Posts'
 
 const mapStateToProps = (state) => {
@@ -7,6 +7,8 @@ const mapStateToProps = (state) => {
     posts: state.profile.posts
   }
 }
+
+const addPostCreator = actions.profile.addPostCreator
 
 const PostsContainer = connect(mapStateToProps, { addPostCreator })(Posts)
 
