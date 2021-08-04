@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { FC, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { withRouter } from "react-router"
 import { compose } from "redux"
@@ -51,4 +51,4 @@ const ProfileContainer = (props: RouteComponentProps<PathParamsType>) => {
   )
 }
 
-export default compose(withRouter, withAuthRerander)(ProfileContainer)
+export default compose(withRouter, withAuthRerander)(ProfileContainer) as FC

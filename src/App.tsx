@@ -4,28 +4,32 @@ import styles from "./App.module.scss"
 import Music from "./component/Music/Music"
 import { initialize } from "./redux/thunk/app"
 import "normalize.css"
-import { connect, Provider } from "react-redux"
+import { Provider, useDispatch, useSelector } from "react-redux"
 import { Route, withRouter } from "react-router"
 import { HashRouter } from "react-router-dom"
 import store from "./redux/store"
 import MessagesContainer from "./component/Messages/MessagesContainer"
 import LoginContainer from "./component/Login/LoginContainer"
-import { compose } from "redux"
 import { useEffect } from "react"
 import { Suspense } from "react"
 import SettingsContainer from "./component/Settings/SettingsContainer"
 import Users from "./component/Users/Users"
+import * as selectors from "./redux/selectors/selectors"
 
-const ProfileContainer = React.lazy(() =>
-  import("./component/Profile/ProfileContainer")
+const ProfileContainer = React.lazy(
+  () => import("./component/Profile/ProfileContainer")
 )
 
-const App = ({ ...props }) => {
+const App = () => {
+  const initialized = useSelector(selectors.app.initialized)
+
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    if (!props.initialized) {
-      props.initialize()
+    if (!initialized) {
+      dispatch(initialize())
     }
-  }, [props.initialized])
+  }, [initialized])
 
   return (
     <div className={styles.app}>
@@ -49,17 +53,7 @@ const App = ({ ...props }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    initialized: state.app.initialized,
-    userId: state.auth.id,
-  }
-}
-
-const AppContainer = compose(
-  withRouter,
-  connect(mapStateToProps, { initialize })
-)(App)
+const AppContainer = withRouter(App)
 
 const SocialNetwork = () => {
   return (
