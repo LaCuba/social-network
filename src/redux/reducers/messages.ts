@@ -1,5 +1,5 @@
 import { Reducer } from "redux"
-import { getType } from "typesafe-actions/dist/get-type"
+import { getType } from "typesafe-actions"
 import { ItemType, MessageType } from "../../types/messages/messages"
 import actions, { ActionsType } from "./../actions/actions"
 

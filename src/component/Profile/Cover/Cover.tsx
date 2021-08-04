@@ -1,8 +1,8 @@
-import React from 'react'
-import coverImg from './../../../common/images/cover-img.jpeg'
-import styles from './Cover.module.scss'
+import React from "react"
+import coverImg from "./../../../common/images/cover-img.jpeg"
+import styles from "./Cover.module.scss"
 
-const Cover = (props) => {
+const Cover = () => {
   return (
     <div className={styles.cover}>
       <div className={styles.coverData}>

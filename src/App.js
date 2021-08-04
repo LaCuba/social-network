@@ -2,8 +2,7 @@ import React from "react"
 import Header from "./component/Header/Header"
 import styles from "./App.module.scss"
 import Music from "./component/Music/Music"
-import { initialize } from "./redux/AppReducer"
-import { getProfile } from "./redux/ProfileReducer"
+import { initialize } from "./redux/thunk/app"
 import "normalize.css"
 import { connect, Provider } from "react-redux"
 import { Route, withRouter } from "react-router"
@@ -25,7 +24,6 @@ const App = ({ ...props }) => {
   useEffect(() => {
     if (!props.initialized) {
       props.initialize()
-      // .then(props.getProfile(props.userId))
     }
   }, [props.initialized])
 
@@ -60,7 +58,7 @@ const mapStateToProps = (state) => {
 
 const AppContainer = compose(
   withRouter,
-  connect(mapStateToProps, { initialize, getProfile })
+  connect(mapStateToProps, { initialize })
 )(App)
 
 const SocialNetwork = () => {

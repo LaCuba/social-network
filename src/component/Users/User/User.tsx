@@ -2,11 +2,11 @@ import React from "react"
 import styles from "./User.module.scss"
 import avatarImg from "./../../../common/icons/avatar.svg"
 import { NavLink } from "react-router-dom"
-import { User } from "../../../types/users/users"
+import { User as UserType } from "../../../types/users/users"
 import { useDispatch } from "react-redux"
 import { setFollow } from "../../../redux/thunk/users"
 
-type Props = User
+type Props = UserType
 
 const User = ({ id, name, status, followed, photos }: Props) => {
   const dispatch = useDispatch()
@@ -15,7 +15,7 @@ const User = ({ id, name, status, followed, photos }: Props) => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.avatar}>
-          <img src={photos ? photos.small : avatarImg} alt="" />
+          <img src={photos.small ? photos.small : avatarImg} alt="" />
         </div>
         <div className={styles.name}>
           <h3>{name}</h3>
