@@ -1,9 +1,7 @@
 import { Reducer } from "redux"
 import { getType } from "typesafe-actions"
-import { usersApi } from "../../api/api"
 import { User } from "../../types/users/users"
 import actions, { ActionsType } from "./../actions/actions"
-import { DispatchType } from "../store"
 
 type InitialState = {
   users: User[]

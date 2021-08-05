@@ -1,4 +1,3 @@
-import { Action } from "redux"
 import { ActionType } from "typesafe-actions"
 import * as app from "./app"
 import * as auth from "./auth"

@@ -8,13 +8,13 @@ import { Provider, useDispatch, useSelector } from "react-redux"
 import { Route, withRouter } from "react-router"
 import { HashRouter } from "react-router-dom"
 import store from "./redux/store"
-import MessagesContainer from "./component/Messages/MessagesContainer"
 import LoginContainer from "./component/Login/LoginContainer"
 import { useEffect } from "react"
 import { Suspense } from "react"
 import SettingsContainer from "./component/Settings/SettingsContainer"
 import Users from "./component/Users/Users"
 import * as selectors from "./redux/selectors/selectors"
+import Messages from "./component/Messages/Messages"
 
 const ProfileContainer = React.lazy(
   () => import("./component/Profile/ProfileContainer")
@@ -45,7 +45,7 @@ const App = () => {
             </Suspense>
           )}
         />
-        <Route path="/messages" render={() => <MessagesContainer />} />
+        <Route path="/messages" render={() => <Messages />} />
         <Route path="/music" render={() => <Music />} />
         <Route path="/users" render={() => <Users />} />
       </div>

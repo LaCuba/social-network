@@ -2,7 +2,6 @@ import { createCustomAction } from "typesafe-actions"
 
 const ADD_MESSAGE = "messages/ADD-MESSAGE"
 
-export const addMessageCreator = createCustomAction(
-  ADD_MESSAGE,
-  (body: string) => ({ body })
-)
+export const addMessage = createCustomAction(ADD_MESSAGE, (body: string) => ({
+  body,
+}))

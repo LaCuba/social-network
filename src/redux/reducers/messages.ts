@@ -79,7 +79,7 @@ const MessagesReducer: Reducer<InitialStateType, ActionsType> = (
   action: ActionsType
 ): InitialStateType => {
   switch (action.type) {
-    case getType(actions.messages.addMessageCreator):
+    case getType(actions.messages.addMessage):
       let newMessage = {
         id: 9,
         bodyMessage: action.body,
