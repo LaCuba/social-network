@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from './MessageHeader.module.scss'
-import avatarImg from './../../../../common/icons/avatar.svg'
-import menuImg from './../../../../common/icons/menu.svg'
+import React from "react"
+import styles from "./MessageHeader.module.scss"
+import avatarImg from "./../../../../common/icons/avatar.svg"
+import menuImg from "./../../../../common/icons/menu.svg"
 
-const MessageHeader = (props) => {
+const MessageHeader = () => {
   return (
     <div className={styles.header}>
       <div className={styles.details}>

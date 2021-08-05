@@ -5,12 +5,9 @@ import Dialog from "./Dialog/Dialog"
 import withAuthRerander from "../hoc/withAuthRerander"
 import { useDispatch, useSelector } from "react-redux"
 import { addMessage } from "../../redux/actions/messages"
-import * as selectors from "./../../redux/selectors/selectors"
 
 const Messages = () => {
   const dispatch = useDispatch()
-  const items = useSelector(selectors.messages.items)
-  const messages = useSelector(selectors.messages.messages)
   const [message, setMessage] = useState("")
 
   const onMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -27,9 +24,9 @@ const Messages = () => {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        <DialogsList items={items} />
+        <DialogsList />
         <div className={styles.rightSide}>
-          <Dialog messages={messages} />
+          <Dialog />
           <div className={styles.sendArea}>
             <textarea
               onChange={onMessageChange}
