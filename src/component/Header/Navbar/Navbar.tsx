@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from './Navbar.module.scss'
-import profile from './../../../common/icons/profile.png'
-import messages from './../../../common/icons/messages.png'
-import music from './../../../common/icons/music.png'
-import users from './../../../common/icons/users.png'
-import { NavLink } from 'react-router-dom'
+import React from "react"
+import styles from "./Navbar.module.scss"
+import profile from "./../../../common/icons/profile.png"
+import messages from "./../../../common/icons/messages.png"
+import music from "./../../../common/icons/music.png"
+import users from "./../../../common/icons/users.png"
+import { NavLink } from "react-router-dom"
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navUl}>
@@ -15,7 +15,7 @@ const Navbar = (props) => {
             <span className={styles.icon}>
               <img src={profile} alt="" />
             </span>
-                Profile
+            Profile
           </NavLink>
         </li>
         <li className={styles.navItem}>
@@ -23,7 +23,7 @@ const Navbar = (props) => {
             <span className={styles.icon}>
               <img src={messages} alt="" />
             </span>
-                Messages
+            Messages
           </NavLink>
         </li>
         <li className={styles.navItem}>
@@ -39,7 +39,7 @@ const Navbar = (props) => {
             <span className={styles.icon}>
               <img src={users} alt="" />
             </span>
-                Users
+            Users
           </NavLink>
         </li>
       </ul>

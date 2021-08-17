@@ -1,8 +1,9 @@
+import { ThunkType } from "../../types/thunk/types"
 import { loginApi } from "../../api/api"
 import actions from "../actions/actions"
 import { DispatchType } from "../store"
 
-export const authMe = () => async (dispatch: DispatchType) => {
+export const authMe = (): ThunkType => async (dispatch) => {
   const response = await loginApi.authMe()
   if (response.resultCode === 0) {
     let { id, email, login } = response.data
