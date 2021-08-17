@@ -20,7 +20,7 @@ const initialState = {
   captcha: null,
 }
 
-const AuthReducer: Reducer<InitialState, ActionsType> = (
+const auth: Reducer<InitialState, ActionsType> = (
   state = initialState,
   action
 ) => {
@@ -45,4 +45,4 @@ const AuthReducer: Reducer<InitialState, ActionsType> = (
   }
 }
 
-export default AuthReducer
+export default auth

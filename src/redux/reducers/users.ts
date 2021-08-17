@@ -19,7 +19,7 @@ const initialState = {
   totalCountUsers: 0,
 }
 
-const UsersReducer: Reducer<InitialState, ActionsType> = (
+const users: Reducer<InitialState, ActionsType> = (
   state = initialState,
   action
 ) => {
@@ -69,4 +69,4 @@ const UsersReducer: Reducer<InitialState, ActionsType> = (
   }
 }
 
-export default UsersReducer
+export default users

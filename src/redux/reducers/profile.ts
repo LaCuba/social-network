@@ -32,7 +32,7 @@ const initialState = {
   userProfile: null,
 }
 
-const ProfileReducer: Reducer<InitialState, ActionsType> = (
+const profile: Reducer<InitialState, ActionsType> = (
   state = initialState,
   action: ActionsType
 ) => {
@@ -69,4 +69,4 @@ const ProfileReducer: Reducer<InitialState, ActionsType> = (
   }
 }
 
-export default ProfileReducer
+export default profile

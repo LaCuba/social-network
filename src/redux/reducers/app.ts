@@ -10,7 +10,7 @@ const initialState = {
   initialized: false,
 }
 
-const AppReducer: Reducer<InitialState, ActionsType> = (
+const app: Reducer<InitialState, ActionsType> = (
   state = initialState,
   action
 ) => {
@@ -25,4 +25,4 @@ const AppReducer: Reducer<InitialState, ActionsType> = (
   }
 }
 
-export default AppReducer
+export default app

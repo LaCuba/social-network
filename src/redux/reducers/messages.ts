@@ -74,7 +74,7 @@ type InitialStateType = {
   messages: MessageType[]
 }
 
-const MessagesReducer: Reducer<InitialStateType, ActionsType> = (
+const messages: Reducer<InitialStateType, ActionsType> = (
   state = initialState,
   action: ActionsType
 ): InitialStateType => {
@@ -95,4 +95,4 @@ const MessagesReducer: Reducer<InitialStateType, ActionsType> = (
   }
 }
 
-export default MessagesReducer
+export default messages
